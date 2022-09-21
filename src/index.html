@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="menu">
-        <img src="./assets/logo.svg">
-        <div class="burger burger_open"></div>
-        <div class="burger burger_close"></div>
-        <input type="checkbox">
+    <div class="topbar">
+        <div class="logo"></div>
+        <img class="burger burger__open" src="./assets/menuopen.svg">
+        <img class="burger burger__close" src="./assets/menuclose.svg">
+        <input class="burger burger__check" type="checkbox">
         <nav class="navigation">
             <ul class="options">
                 <li class="anchor"><a href="#">WHY US</a></li>
@@ -25,42 +25,45 @@
         </nav>
     </div>
 
-    <section>
-        <div class="part1">
-            <h1>Sell More!</h1>
-            <h3>Open shop on our platform and
+    <section class="whyus">
+        <div class="shop">
+            <h1 class="shop__title">Sell More!</h1>
+            <h3 class="shop__text">Open shop on our platform and
                 increase your sales</h3>
-            <div class="btnContainer">
-                <button>Open your shop</button>
+            <div class="button__container">
+                <button class="button button__shop">Open your shop</button>
             </div>
         </div>
-        <div class="img_section1"></div>
+        <div class="image__section-first"></div>
         <div class="platforms">
-            <h2>The most popular sales platform in country</h2>
-            <div class="img_platform img1"></div>
-            <div class="img_platform img2"></div>
-            <div class="img_platform img3"></div>
+            <h2 class="plaform__title">The most popular sales platform in country</h2>
+            <div class="platform__image platform__image-first"></div>
+            <div class="platform__image platform__image-second"></div>
+            <div class="platform__image platform__image-third"></div>
         </div>
     </section>
 
     <section class="benefits">
         <div class="card">
-            <div class="img_platform img_card1"></div>
-            <h2>Be always first</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <div class="card__image card__image-first"></div>
+            <h2 class="card__title">Be always first</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
         <div class="card">
-            <div class="img_platform img_card2"></div>
-            <h2>Your shop is where you are!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <div class="card__image card__image-second"></div>
+            <h2 class="card__title">Your shop is where you are!</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
-        <div class="card card_third">
-            <h2>Increase recognition your brand!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        <div class="card card__bottom">
+            <h2 class="card__title">Increase recognition your brand!</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <div class="img_platform img_card3"></div>
+            <div class="card__image card__image-third"></div>
         </div>
     </section>
 </body>

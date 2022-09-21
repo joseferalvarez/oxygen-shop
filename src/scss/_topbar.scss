@@ -1,0 +1,57 @@
+@use "./imports";
+
+.topbar {
+    display: block;
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0px 3px 6px #00000029;
+
+    .logo {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .burger {
+        position: relative;
+        bottom: 10px;
+    }
+
+    .burger__check {
+        opacity: 0;
+    }
+
+    .burger__close {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+
+        .anchor {
+            list-style: none;
+        }
+
+        .anchor a {
+            font-family: "Open Sans";
+            font-weight: 700;
+            text-decoration: none;
+            color: black;
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+        }
+    }
+
+    input:checked~.navigation {
+        display: block;
+    }
+
+    input:checked~.burger__close {
+        display: inline-block;
+    }
+
+    input:checked~.burger__open {
+        display: none;
+    }
+
+}

@@ -12,17 +12,17 @@
     border: 1px solid #E8E9ED;
     border-radius: 5px;
 
-    h2 {
+    .card__title {
         font-family: "Raleway";
         font-size: 1.8rem;
     }
 
-    p {
+    .card__text {
         font-family: "Open Sans";
         font-size: 0.9rem;
     }
 
-    .img_platform {
+    .card__image {
         width: 100%;
         height: 100px;
         background-size: contain;
@@ -31,40 +31,33 @@
         margin: 30px 0px;
     }
 
-    .img_card1 {
+    .card__image-first {
         background-image: url("../assets/macbook.svg");
     }
 
-    .img_card2 {
+    .card__image-second {
         background-image: url("../assets/iphone.svg");
     }
 
-    .img_card3 {
+    .card__image-third {
         background-image: url("../assets/trumpet.svg");
         background-color: #55DFB4;
     }
 
 }
 
-.card_third {
+.card__bottom {
     padding: 0;
 
-    h2,
-    p {
-        margin: 0 10%;
+    .card__title,
+    .card__text {
+        margin: 5% 10%;
     }
 
-    h2 {
-        margin-top: 10%;
-    }
-
-    p {
-        margin-bottom: 10%;
-    }
-
-    .img_platform {
-        height: 195px;
+    .card__image {
         margin: 0;
-
+        height: 195px;
+        border-radius: 5px;
+        border: 1px solid #E8E9ED;
     }
 }

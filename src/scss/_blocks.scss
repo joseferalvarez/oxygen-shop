@@ -1,4 +1,13 @@
-button {
+.logo {
+    background-image: url("../assets/logo.svg");
+    width: 100%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.button {
     color: white;
     background-color: #08A6E4;
     border-radius: 40px;
