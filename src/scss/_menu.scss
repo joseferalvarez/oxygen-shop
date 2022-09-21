@@ -1,0 +1,70 @@
+@use "./imports";
+
+.menu {
+    display: block;
+    padding: 30px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+input {
+    opacity: 0;
+}
+
+input,
+.burger_open,
+.burger_close {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.burger {
+    width: 15.56px;
+    height: 15.56px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.burger_open {
+    background-image: url("../assets/menuopen.svg");
+}
+
+.burger_close {
+    background-image: url("../assets/menuclose.svg");
+}
+
+.navigation {
+    display: none;
+    padding: 20px 0px;
+}
+
+.menu input:checked~.navigation {
+    display: block;
+}
+
+.menu input:checked~.burger_open {
+    display: none;
+}
+
+.menu input:not(:checked)~.burger_close {
+    display: none;
+}
+
+input {
+    background-image: url("../assets/menuopen.svg");
+}
+
+.anchor {
+    list-style: none;
+}
+
+.anchor a {
+    font-family: "Open Sans";
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}

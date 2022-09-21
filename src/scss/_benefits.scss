@@ -1,0 +1,70 @@
+.benefits {
+    display: block;
+    background-color: #F7F7F7;
+    align-content: center;
+    padding: 42px 0px;
+}
+
+.card {
+    background-color: white;
+    margin: 5% 10%;
+    padding: 10%;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+
+    h2 {
+        font-family: "Raleway";
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-family: "Open Sans";
+        font-size: 0.9rem;
+    }
+
+    .img_platform {
+        width: 100%;
+        height: 100px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 30px 0px;
+    }
+
+    .img_card1 {
+        background-image: url("../assets/macbook.svg");
+    }
+
+    .img_card2 {
+        background-image: url("../assets/iphone.svg");
+    }
+
+    .img_card3 {
+        background-image: url("../assets/trumpet.svg");
+        background-color: #55DFB4;
+    }
+
+}
+
+.card_third {
+    padding: 0;
+
+    h2,
+    p {
+        margin: 0 10%;
+    }
+
+    h2 {
+        margin-top: 10%;
+    }
+
+    p {
+        margin-bottom: 10%;
+    }
+
+    .img_platform {
+        height: 195px;
+        margin: 0;
+
+    }
+}

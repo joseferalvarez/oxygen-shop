@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400&display=swap");
+.menu {
+  display: block;
+  padding: 30px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+
+input {
+  opacity: 0;
+}
+
+input,
+.burger_open,
+.burger_close {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.burger {
+  width: 15.56px;
+  height: 15.56px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.burger_open {
+  background-image: url("../assets/menuopen.svg");
+}
+
+.burger_close {
+  background-image: url("../assets/menuclose.svg");
+}
+
+.navigation {
+  display: none;
+  padding: 20px 0px;
+}
+
+.menu input:checked ~ .navigation {
+  display: block;
+}
+
+.menu input:checked ~ .burger_open {
+  display: none;
+}
+
+.menu input:not(:checked) ~ .burger_close {
+  display: none;
+}
+
+input {
+  background-image: url("../assets/menuopen.svg");
+}
+
+.anchor {
+  list-style: none;
+}
+
+.anchor a {
+  font-family: "Open Sans";
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+.part1 {
+  margin: 20% 10%;
+}
+.part1 h1,
+.part1 h3 {
+  text-align: center;
+}
+.part1 h1 {
+  font-family: "Raleway";
+  font-size: 2rem;
+  line-height: 41px;
+}
+.part1 h3 {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 23px;
+}
+.part1 .btnContainer {
+  display: flex;
+  margin-top: 28px;
+  justify-content: center;
+}
+.part1 .btnContainer button {
+  width: 90%;
+}
+
+.img_section1 {
+  background-image: url("../assets/bgsection1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 267px;
+}
+
+.platforms h2 {
+  margin: 5% 10%;
+  font-family: "Raleway";
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.platforms .img_platform {
+  width: 100%;
+  height: 140px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 30px 0px;
+}
+.platforms .img1 {
+  background-image: url("../assets/card1section1.svg");
+}
+.platforms .img2 {
+  background-image: url("../assets/card2section1.svg");
+}
+.platforms .img3 {
+  background-image: url("../assets/card3section1.svg");
+}
+
+.benefits {
+  display: block;
+  background-color: #F7F7F7;
+  align-content: center;
+  padding: 42px 0px;
+}
+
+.card {
+  background-color: white;
+  margin: 5% 10%;
+  padding: 10%;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+.card h2 {
+  font-family: "Raleway";
+  font-size: 1.8rem;
+}
+.card p {
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+}
+.card .img_platform {
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 30px 0px;
+}
+.card .img_card1 {
+  background-image: url("../assets/macbook.svg");
+}
+.card .img_card2 {
+  background-image: url("../assets/iphone.svg");
+}
+.card .img_card3 {
+  background-image: url("../assets/trumpet.svg");
+  background-color: #55DFB4;
+}
+
+.card_third {
+  padding: 0;
+}
+.card_third h2,
+.card_third p {
+  margin: 0 10%;
+}
+.card_third h2 {
+  margin-top: 10%;
+}
+.card_third p {
+  margin-bottom: 10%;
+}
+.card_third .img_platform {
+  height: 195px;
+  margin: 0;
+}
+
+button {
+  color: white;
+  background-color: #08A6E4;
+  border-radius: 40px;
+  padding: 20px 40px;
+  border: none;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  font-family: "Open Sans";
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+/*# sourceMappingURL=styles.css.map */

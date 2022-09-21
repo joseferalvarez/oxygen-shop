@@ -7,6 +7,6 @@
   },
   "scripts": {
     "start": "http-server",
-    "compile": "sass --watch src/styles.scss src/styles.css"
+    "compile": "sass --watch src/scss/styles.scss src/css/styles.css"
   }
 }
