@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400&display=swap");
 .topbar {
   display: block;
   padding: 30px;
@@ -162,6 +162,227 @@
   border: 1px solid #E8E9ED;
 }
 
+.pricing {
+  display: block;
+  align-content: center;
+}
+
+.card__pricing {
+  display: block;
+  width: 80%;
+  margin: 10%;
+  border: 1px solid black;
+  border-radius: 18px;
+}
+.card__pricing .card__price {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+.card__pricing .card__price .card__price-type {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.card__pricing .card__price .card__price-dollar {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 2.8rem;
+}
+.card__pricing .card__price .card__price-offer {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.card__pricing .card__atributes {
+  margin-top: 40px;
+  display: inline-block;
+  width: 49%;
+}
+.card__pricing .card__atributes .card__atr {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+.card__pricing .card__atributes .card__atr .card__check {
+  background-image: url("../assets/check.svg");
+  height: 15px;
+  width: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__pricing .card__atributes .card__atr .card__cross {
+  background-image: url("../assets/cross.svg");
+  height: 15px;
+  width: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__pricing .card__atributes .card__atr .card__text {
+  margin-left: 10px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.card__pricing .card__button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 20px;
+}
+
+.card__pricing-red {
+  border-color: #FB3B64;
+}
+.card__pricing-red .card__price .card__price-dollar {
+  color: #FB3B64;
+}
+.card__pricing-red .card__button button {
+  background-color: #FB3B64;
+}
+
+.card__pricing-blue {
+  border-color: #07ACE6;
+}
+.card__pricing-blue .card__price .card__price-dollar {
+  color: #07ACE6;
+}
+.card__pricing-blue .card__button button {
+  background-color: #07ACE6;
+}
+
+.card__pricing-green {
+  border-color: #55DFB4;
+}
+.card__pricing-green .card__price .card__price-dollar {
+  color: #55DFB4;
+}
+.card__pricing-green .card__button button {
+  background-color: #55DFB4;
+}
+
+.contact {
+  display: block;
+}
+.contact .contact__questions {
+  margin-left: 30px;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.contact .contact__text {
+  margin-left: 30px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+}
+.contact .contact__email {
+  display: flex;
+  margin-top: 38px;
+}
+.contact .contact__email .contact__email-icon {
+  margin-left: 32px;
+  background-image: url("../assets/mail.svg");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.contact .contact__email .contact__email-text {
+  color: #A5A5A5;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+.contact .contact__phone {
+  display: flex;
+}
+.contact .contact__phone .contact__phone-icon {
+  margin-left: 32px;
+  background-image: url("../assets/phone.svg");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.contact .contact__phone .contact__phone-text {
+  color: #A5A5A5;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+.contact .contact__input {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.contact .contact__input .contact__input-text {
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: #08A6E4;
+}
+.contact .contact__input .contact__input-input {
+  border: 0;
+  width: 90%;
+  border-bottom: 1px solid #95989A;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+}
+.contact .contact__policies {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 26px;
+}
+.contact .contact__policies .contact__policies-checkbox {
+  width: 24px;
+  height: 24px;
+}
+.contact .contact__policies .contact__policies-text {
+  margin: 0px 30px 30px 10px;
+  width: 90%;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #707070;
+}
+.contact .contact__button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 30px 30px 0px;
+}
+.contact .contact__button .button {
+  width: 60%;
+}
+
+.footer {
+  display: block;
+  box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 30px;
+}
+.footer .footer__logo {
+  display: inline-block;
+  width: 70%;
+}
+.footer .footer__logo .footer__rights {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+.footer .social-media {
+  display: inline-block;
+}
+.footer .social-media .social-media__twitter {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/twitter.svg");
+}
+.footer .social-media .social-media__facebook {
+  display: inline-block;
+  margin-left: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/facebook.svg");
+}
+
 .logo {
   background-image: url("../assets/logo.svg");
   width: 100%;
@@ -175,7 +396,7 @@
   color: white;
   background-color: #08A6E4;
   border-radius: 40px;
-  padding: 20px 40px;
+  padding: 10px 30px;
   border: none;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   font-family: "Open Sans";

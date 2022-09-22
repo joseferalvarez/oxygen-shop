@@ -1,0 +1,114 @@
+.pricing {
+    display: block;
+    align-content: center;
+}
+
+.card__pricing {
+    display: block;
+    width: 80%;
+    margin: 10%;
+    border: 1px solid black;
+    border-radius: 18px;
+
+    .card__price {
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+
+        .card__price-type {
+            font-family: "Raleway";
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .card__price-dollar {
+            font-family: "Open Sans";
+            font-weight: 300;
+            font-size: 2.8rem;
+        }
+
+        .card__price-offer {
+            font-family: "Raleway";
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+    }
+
+    .card__atributes {
+        margin-top: 40px;
+        display: inline-block;
+        width: 49%;
+
+        .card__atr {
+            display: flex;
+            justify-content: flex-start;
+            margin: 10px 0px;
+
+            .card__check {
+                background-image: url("../assets/check.svg");
+                height: 15px;
+                width: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .card__cross {
+                background-image: url("../assets/cross.svg");
+                height: 15px;
+                width: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .card__text {
+                margin-left: 10px;
+                font-family: "Open Sans";
+                font-weight: 400;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .card__button {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 20px;
+    }
+}
+
+.card__pricing-red {
+    border-color: #FB3B64;
+
+    .card__price .card__price-dollar {
+        color: #FB3B64;
+    }
+
+    .card__button button {
+        background-color: #FB3B64;
+    }
+}
+
+.card__pricing-blue {
+    border-color: #07ACE6;
+
+    .card__price .card__price-dollar {
+        color: #07ACE6;
+    }
+
+    .card__button button {
+        background-color: #07ACE6;
+    }
+}
+
+.card__pricing-green {
+    border-color: #55DFB4;
+
+    .card__price .card__price-dollar {
+        color: #55DFB4;
+    }
+
+    .card__button button {
+        background-color: #55DFB4;
+    }
+}

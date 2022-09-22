@@ -1,0 +1,35 @@
+.footer {
+    display: block;
+    box-shadow: 0px -3px 6px #00000029;
+    padding: 30px;
+
+    .footer__logo {
+        display: inline-block;
+        width: 70%;
+
+        .footer__rights {
+            font-family: "Open Sans";
+            font-weight: 400;
+            font-size: 0.7rem;
+        }
+    }
+
+    .social-media {
+        display: inline-block;
+
+        .social-media__twitter {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-image: url("../assets/twitter.svg");
+        }
+
+        .social-media__facebook {
+            display: inline-block;
+            margin-left: 20px;
+            width: 24px;
+            height: 24px;
+            background-image: url("../assets/facebook.svg");
+        }
+    }
+}
