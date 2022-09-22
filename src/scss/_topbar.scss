@@ -1,32 +1,42 @@
 @use "./imports";
 
 .topbar {
-    display: block;
-    padding: 30px;
-    display: inline-block;
+    padding: 20px 0px 20px 25px;
     width: 100%;
     box-shadow: 0px 3px 6px #00000029;
 
-    .logo {
-        display: inline-block;
-        width: 80%;
+    .topbar__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .burger {
-        position: relative;
-        bottom: 10px;
+        width: 15px;
+        height: 15px;
+        align-content: flex-end;
+        margin-right: 30px;
+    }
+
+    .burger__open {
+        content: url("../assets/menuopen.svg");
+    }
+
+    .burger__close {
+        content: url("../assets/menuclose.svg");
     }
 
     .burger__check {
         opacity: 0;
     }
 
-    .burger__close {
-        display: none;
-    }
-
     .navigation {
+        margin-top: 40px;
         display: none;
+
+        .options li {
+            margin: 7px 0;
+        }
 
         .anchor {
             list-style: none;
@@ -38,20 +48,12 @@
             text-decoration: none;
             color: black;
             font-size: 0.8rem;
-            line-height: 1.3rem;
         }
     }
 
-    input:checked~.navigation {
+
+    .navwatch {
         display: block;
-    }
-
-    input:checked~.burger__close {
-        display: inline-block;
-    }
-
-    input:checked~.burger__open {
-        display: none;
     }
 
 }

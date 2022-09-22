@@ -11,21 +11,21 @@
 
 <body>
     <div class="topbar">
-        <div class="logo"></div>
-        <img class="burger burger__open" src="./assets/menuopen.svg">
-        <img class="burger burger__close" src="./assets/menuclose.svg">
-        <input class="burger burger__check" type="checkbox">
+        <div class="topbar__container">
+            <a href="./index.html"><img class="logo" src="./assets/logo.svg"></a>
+            <img class="burger burger__open" src="./assets/menuopen.svg">
+        </div>
         <nav class="navigation">
             <ul class="options">
-                <li class="anchor"><a href="#">WHY US</a></li>
-                <li class="anchor"><a href="#">BENEFITS</a></li>
-                <li class="anchor"><a href="#">PRICES</a></li>
-                <li class="anchor"><a href="#">CONTACT</a></li>
+                <li class="anchor"><a href="#anchor-whyus">WHY US</a></li>
+                <li class="anchor"><a href="#anchor-benefits">BENEFITS</a></li>
+                <li class="anchor"><a href="#anchor-pricing">PRICES</a></li>
+                <li class="anchor"><a href="#anchor-contact">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 
-    <section class="whyus">
+    <section class="whyus" id="anchor-whyus">
         <div class="shop">
             <h1 class="shop__title">Sell More!</h1>
             <h3 class="shop__text">Open shop on our platform and
@@ -43,7 +43,7 @@
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="anchor-benefits">
         <div class="card">
             <div class="card__image card__image-first"></div>
             <h2 class="card__title">Be always first</h2>
@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="anchor-pricing">
         <div class="card__pricing card__pricing-red">
             <div class="card__price">
                 <h2 class="card__price-type">Basic</h2>
@@ -168,7 +168,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="anchor-contact">
         <h2 class="contact__questions">Any questions?</h2>
         <p class="contact__text">Leave your email address or call us!</p>
 
@@ -212,5 +212,7 @@
         </div>
     </footer>
 </body>
+
+<script src="./js/index.js" type="module"></script>
 
 </html>
