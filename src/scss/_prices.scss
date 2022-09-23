@@ -1,6 +1,5 @@
 .pricing {
     display: block;
-    align-content: center;
 
     .pricing__title {
         font-family: "Raleway";
@@ -13,7 +12,6 @@
 
 .card__pricing {
     display: block;
-    width: 80%;
     margin: 10%;
     border: 1px solid black;
     border-radius: 18px;
@@ -80,6 +78,10 @@
     }
 }
 
+.card__pricing:hover {
+    zoom: 1.2;
+}
+
 .card__pricing-red {
     border-color: #FB3B64;
 
@@ -117,12 +119,22 @@
 }
 
 @media only screen and (min-width: 1000px) {
+
+    .pricing {
+        display: flex;
+        flex-direction: column;
+    }
+
     .cards__prices {
         display: flex;
-        margin: 0 5% 0 5%;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 5%;
 
         .card__pricing {
-            margin: 2%;
+            margin: 0%;
+            width: 300px;
 
             .card__price {
                 display: block;

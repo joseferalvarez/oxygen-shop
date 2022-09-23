@@ -40,5 +40,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .footer__logo,
+        .social-media {
+            margin: 0 5%;
+        }
     }
 }

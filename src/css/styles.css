@@ -49,6 +49,7 @@
   .topbar {
     display: flex;
     justify-content: space-between;
+    padding: 0px 0px 0px 25px;
   }
   .topbar .burger {
     display: none;
@@ -59,17 +60,30 @@
     margin: 0 50px 0 0;
   }
   .topbar .navigation .options li {
-    margin: 0 20px 0 20px;
+    margin: 0;
   }
   .topbar .navigation .anchor a {
     color: #A5A5A5;
+    height: 20px;
   }
   .topbar .options li {
     display: inline-block;
+    padding: 25px 20px 25px 20px;
+    border-bottom: 4px solid transparent;
+  }
+  .topbar .options li:hover {
+    border-bottom: 4px solid #08A6E4;
+  }
+  .topbar .options li:hover a {
+    color: black;
   }
 }
+.whyus {
+  padding-bottom: 10%;
+}
+
 .shop {
-  margin: 20% 10%;
+  margin: 15% 10%;
 }
 .shop .shop__title,
 .shop .shop__text {
@@ -246,7 +260,6 @@
 }
 .pricing {
   display: block;
-  align-content: center;
 }
 .pricing .pricing__title {
   font-family: "Raleway";
@@ -258,7 +271,6 @@
 
 .card__pricing {
   display: block;
-  width: 80%;
   margin: 10%;
   border: 1px solid black;
   border-radius: 18px;
@@ -314,6 +326,10 @@
   top: 20px;
 }
 
+.card__pricing:hover {
+  zoom: 1.2;
+}
+
 .card__pricing-red {
   border-color: #FB3B64;
 }
@@ -345,12 +361,20 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+  }
   .cards__prices {
     display: flex;
-    margin: 0 5% 0 5%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 5%;
   }
   .cards__prices .card__pricing {
-    margin: 2%;
+    margin: 0%;
+    width: 300px;
   }
   .cards__prices .card__pricing .card__price {
     display: block;
@@ -458,6 +482,9 @@
     margin-top: 38px;
     margin-left: 32px;
   }
+  .contact .contact__part1 .contact__data .contact__phone {
+    margin-left: 20px;
+  }
   .contact .contact__part2 {
     width: 40%;
   }
@@ -501,6 +528,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .footer .footer__logo,
+.footer .social-media {
+    margin: 0 5%;
   }
 }
 .logo {

@@ -61,6 +61,7 @@
     .topbar {
         display: flex;
         justify-content: space-between;
+        padding: 0px 0px 0px 25px;
 
         .burger {
             display: none;
@@ -72,16 +73,27 @@
             margin: 0 50px 0 0;
 
             .options li {
-                margin: 0 20px 0 20px;
+                margin: 0;
             }
 
             .anchor a {
                 color: #A5A5A5;
+                height: 20px;
             }
         }
 
         .options li {
             display: inline-block;
+            padding: 25px 20px 25px 20px;
+            border-bottom: 4px solid transparent;
+        }
+
+        .options li:hover {
+            border-bottom: 4px solid #08A6E4;
+        }
+
+        .options li:hover a {
+            color: black;
         }
     }
 }
