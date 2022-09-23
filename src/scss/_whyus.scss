@@ -43,12 +43,7 @@
 
 
 .image__section-first {
-    background-image: url("../assets/bgsection1.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
-    height: 267px;
 }
 
 .platforms {
@@ -60,6 +55,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
+
+    .image__section-first {
+        content: url("../assets/images/background.png");
+    }
 
     .platforms {
         display: flex;

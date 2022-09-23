@@ -19,11 +19,11 @@
     }
 
     .burger__open {
-        content: url("../assets/menuopen.svg");
+        content: url("../assets/icons/menuopen.svg");
     }
 
     .burger__close {
-        content: url("../assets/menuclose.svg");
+        content: url("../assets/icons/menuclose.svg");
     }
 
     .burger__check {
@@ -55,5 +55,33 @@
     .navwatch {
         display: block;
     }
+}
 
+@media only screen and (min-width: 1000px) {
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+
+        .burger {
+            display: none;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            margin: 0 50px 0 0;
+
+            .options li {
+                margin: 0 20px 0 20px;
+            }
+
+            .anchor a {
+                color: #A5A5A5;
+            }
+        }
+
+        .options li {
+            display: inline-block;
+        }
+    }
 }
