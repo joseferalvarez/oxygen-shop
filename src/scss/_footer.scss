@@ -33,3 +33,12 @@
         }
     }
 }
+
+@media only screen and (min-width: 1000px) {
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,6 +1,4 @@
 .contact {
-    display: block;
-
     .contact__questions {
         margin-left: 30px;
         font-family: "Raleway";
@@ -17,10 +15,8 @@
 
     .contact__email {
         display: flex;
-        margin-top: 38px;
 
         .contact__email-icon {
-            margin-left: 32px;
             background-image: url("../assets/mail.svg");
             width: 20px;
             height: 20px;
@@ -39,7 +35,6 @@
         display: flex;
 
         .contact__phone-icon {
-            margin-left: 32px;
             background-image: url("../assets/phone.svg");
             width: 20px;
             height: 20px;
@@ -54,24 +49,19 @@
         }
     }
 
-    .contact__input {
-        margin-top: 30px;
-        margin-left: 30px;
+    .contact__input-text {
+        font-family: "Open Sans";
+        font-weight: 600;
+        color: #08A6E4;
+    }
 
-        .contact__input-text {
-            font-family: "Open Sans";
-            font-weight: 600;
-            color: #08A6E4;
-        }
-
-        .contact__input-input {
-            border: 0;
-            width: 90%;
-            border-bottom: 1px solid #95989A;
-            font-family: "Open Sans";
-            font-weight: 400;
-            font-size: 1rem;
-        }
+    .contact__input-input {
+        border: 0;
+        width: 90%;
+        border-bottom: 1px solid #95989A;
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 1rem;
     }
 
     .contact__policies {
@@ -102,6 +92,32 @@
 
         .button {
             width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+
+        .contact__part1 {
+            width: 40%;
+
+            .contact__data {
+                display: flex;
+                margin-top: 38px;
+                margin-left: 32px;
+            }
+        }
+
+        .contact__part2 {
+            width: 40%;
+
+            .contact__input {
+                margin: 10px 0 10px 0;
+            }
         }
     }
 }

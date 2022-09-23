@@ -74,6 +74,14 @@
   width: 90%;
 }
 
+.plaform__title {
+  margin: 5% 10%;
+  font-family: "Raleway";
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 .image__section-first {
   background-image: url("../assets/bgsection1.svg");
   background-size: cover;
@@ -83,31 +91,20 @@
   height: 267px;
 }
 
-.platforms .plaform__title {
-  margin: 5% 10%;
-  font-family: "Raleway";
-  font-weight: 300;
-  text-align: center;
-  font-size: 1.8rem;
-}
 .platforms .platform__image {
-  width: 100%;
-  height: 140px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 30px 0px;
-}
-.platforms .platform__image-first {
-  background-image: url("../assets/card1section1.svg");
-}
-.platforms .platform__image-second {
-  background-image: url("../assets/card2section1.svg");
-}
-.platforms .platform__image-third {
-  background-image: url("../assets/card3section1.svg");
+  display: block;
+  margin: 30px auto;
 }
 
+@media only screen and (min-width: 1000px) {
+  .platforms {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .platform__image {
+    justify-content: space-around;
+  }
+}
 .benefits {
   display: block;
   background-color: #F7F7F7;
@@ -116,56 +113,126 @@
 }
 
 .card {
+  display: block;
   background-color: white;
-  margin: 5% 10%;
-  padding: 10%;
+  margin: 5% 5%;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
 }
-.card .card__title {
+.card .card__text {
+  display: block;
+  margin: 5% 5%;
+}
+.card .card__text .card__title {
+  margin-top: 25px;
   font-family: "Raleway";
+  font-weight: 400;
   font-size: 1.8rem;
 }
-.card .card__text {
+.card .card__text .card__description {
+  margin-top: 10px;
   font-family: "Open Sans";
   font-size: 0.9rem;
 }
+.card .card__text .card__line {
+  display: none;
+  margin-top: 10%;
+  width: 75%;
+}
 .card .card__image {
-  width: 100%;
-  height: 100px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 30px 0px;
+  display: flex;
+  position: relative;
 }
-.card .card__image-first {
-  background-image: url("../assets/macbook.svg");
-}
-.card .card__image-second {
-  background-image: url("../assets/iphone.svg");
-}
-.card .card__image-third {
-  background-image: url("../assets/trumpet.svg");
-  background-color: #55DFB4;
+.card .card__image .card__foreground {
+  margin: auto;
+  margin-top: 10%;
+  width: 60%;
+  z-index: 1;
 }
 
-.card__bottom {
-  padding: 0;
+.card__image-first .card__background {
+  position: absolute;
+  width: 35%;
+  right: 40px;
+  top: 5%;
 }
-.card__bottom .card__title,
-.card__bottom .card__text {
-  margin: 5% 10%;
+
+.card__image-second .card__background {
+  position: absolute;
+  align-content: center;
+  left: 20%;
+  top: 5%;
+  width: 45%;
+  margin: auto;
 }
-.card__bottom .card__image {
-  margin: 0;
-  height: 195px;
+
+.card__image-third {
+  width: 100%;
+  background-color: #55DFB4;
   border-radius: 5px;
   border: 1px solid #E8E9ED;
 }
+.card__image-third .card__foreground {
+  position: relative;
+  top: 25%;
+  right: 5%;
+}
 
+@media only screen and (min-width: 1000px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card .card__text {
+    width: 50%;
+  }
+  .card .card__text .card__line {
+    display: block;
+  }
+  .card .card__text .card__line-red {
+    border-color: #FB3B64;
+  }
+  .card .card__text .card__line-blue {
+    border-color: #08A6E4;
+  }
+  .card .card__text .card__line-green {
+    border-color: #55DFB4;
+  }
+  .card .card__image {
+    width: 50%;
+  }
+  .card__third {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background-color: #F7F7F7;
+    border: 0;
+  }
+  .card__third .card__image {
+    margin-left: 30px;
+  }
+  .card__third .card__text {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 30px 0 0;
+    padding: 5%;
+    background-color: white;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    justify-content: center;
+  }
+}
 .pricing {
   display: block;
   align-content: center;
+}
+.pricing .pricing__title {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 2.25rem;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .card__pricing {
@@ -262,8 +329,24 @@
   background-color: #55DFB4;
 }
 
-.contact {
-  display: block;
+@media only screen and (min-width: 1000px) {
+  .cards__prices {
+    display: flex;
+    margin: 0 5% 0 5%;
+  }
+  .cards__prices .card__pricing {
+    margin: 3%;
+  }
+  .cards__prices .card__pricing .card__price {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+  }
+  .cards__prices .card__pricing .card__atributes {
+    display: block;
+    margin: auto;
+    margin-top: 15%;
+  }
 }
 .contact .contact__questions {
   margin-left: 30px;
@@ -279,10 +362,8 @@
 }
 .contact .contact__email {
   display: flex;
-  margin-top: 38px;
 }
 .contact .contact__email .contact__email-icon {
-  margin-left: 32px;
   background-image: url("../assets/mail.svg");
   width: 20px;
   height: 20px;
@@ -298,7 +379,6 @@
   display: flex;
 }
 .contact .contact__phone .contact__phone-icon {
-  margin-left: 32px;
   background-image: url("../assets/phone.svg");
   width: 20px;
   height: 20px;
@@ -310,16 +390,12 @@
   font-family: "Open Sans";
   font-weight: 600;
 }
-.contact .contact__input {
-  margin-top: 30px;
-  margin-left: 30px;
-}
-.contact .contact__input .contact__input-text {
+.contact .contact__input-text {
   font-family: "Open Sans";
   font-weight: 600;
   color: #08A6E4;
 }
-.contact .contact__input .contact__input-input {
+.contact .contact__input-input {
   border: 0;
   width: 90%;
   border-bottom: 1px solid #95989A;
@@ -353,6 +429,27 @@
   width: 60%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
+  .contact .contact__part1 {
+    width: 40%;
+  }
+  .contact .contact__part1 .contact__data {
+    display: flex;
+    margin-top: 38px;
+    margin-left: 32px;
+  }
+  .contact .contact__part2 {
+    width: 40%;
+  }
+  .contact .contact__part2 .contact__input {
+    margin: 10px 0 10px 0;
+  }
+}
 .footer {
   display: block;
   box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.1607843137);
@@ -384,6 +481,13 @@
   background-image: url("../assets/facebook.svg");
 }
 
+@media only screen and (min-width: 1000px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .logo {
   width: 206px;
   height: 37px;

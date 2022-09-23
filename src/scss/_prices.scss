@@ -1,6 +1,14 @@
 .pricing {
     display: block;
     align-content: center;
+
+    .pricing__title {
+        font-family: "Raleway";
+        font-weight: 400;
+        font-size: 2.25rem;
+        text-align: center;
+        margin-top: 50px;
+    }
 }
 
 .card__pricing {
@@ -110,5 +118,28 @@
 
     .card__button button {
         background-color: #55DFB4;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .cards__prices {
+        display: flex;
+        margin: 0 5% 0 5%;
+
+        .card__pricing {
+            margin: 3%;
+
+            .card__price {
+                display: block;
+                margin: auto;
+                margin-top: 5%
+            }
+
+            .card__atributes {
+                display: block;
+                margin: auto;
+                margin-top: 15%;
+            }
+        }
     }
 }
