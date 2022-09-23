@@ -13,39 +13,52 @@
         font-size: 1rem;
     }
 
-    .contact__email {
-        display: flex;
+    .contact__data {
+        margin: 30px 0 0 30px;
 
-        .contact__email-icon {
-            background-image: url("../assets/mail.svg");
-            width: 20px;
-            height: 20px;
-            background-size: contain;
-            background-repeat: no-repeat;
+        .contact__email {
+            display: flex;
+
+            .contact__email-icon {
+                background-image: url("../assets/mail.svg");
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .contact__email-text {
+                color: #A5A5A5;
+                font-family: "Open Sans";
+                font-weight: 600;
+            }
         }
 
-        .contact__email-text {
-            color: #A5A5A5;
-            font-family: "Open Sans";
-            font-weight: 600;
+        .contact__phone {
+            display: flex;
+            margin-top: 5px;
+
+            .contact__phone-icon {
+                background-image: url("../assets/phone.svg");
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .contact__phone-text {
+                color: #A5A5A5;
+                font-family: "Open Sans";
+                font-weight: 600;
+            }
         }
     }
 
-    .contact__phone {
-        display: flex;
+    .contact__part2 {
+        margin: 30px 0 0 30px;
 
-        .contact__phone-icon {
-            background-image: url("../assets/phone.svg");
-            width: 20px;
-            height: 20px;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .contact__phone-text {
-            color: #A5A5A5;
-            font-family: "Open Sans";
-            font-weight: 600;
+        .contact__input {
+            margin: 10px 0 10px 0;
         }
     }
 
@@ -92,6 +105,7 @@
 
         .button {
             width: 60%;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
         }
     }
 }

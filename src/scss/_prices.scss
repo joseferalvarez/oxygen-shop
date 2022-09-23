@@ -75,11 +75,15 @@
         justify-content: center;
         position: relative;
         top: 20px;
+
+        .button {
+            width: 40%;
+        }
     }
 }
 
 .card__pricing:hover {
-    zoom: 1.2;
+    transform: scale(1.10);
 }
 
 .card__pricing-red {
@@ -94,6 +98,10 @@
     }
 }
 
+.card__pricing-red:hover {
+    box-shadow: 5px 10px 14px rgba(235, 71, 110, 0.29)
+}
+
 .card__pricing-blue {
     border-color: #07ACE6;
 
@@ -106,6 +114,10 @@
     }
 }
 
+.card__pricing-blue:hover {
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29)
+}
+
 .card__pricing-green {
     border-color: #55DFB4;
 
@@ -116,6 +128,10 @@
     .card__button button {
         background-color: #55DFB4;
     }
+}
+
+.card__pricing-green:hover {
+    box-shadow: 5px 10px 14px rgba(85, 223, 180, 0.29)
 }
 
 @media only screen and (min-width: 1000px) {
@@ -134,7 +150,7 @@
 
         .card__pricing {
             margin: 0%;
-            width: 300px;
+            width: 30%;
 
             .card__price {
                 display: block;
