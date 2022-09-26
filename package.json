@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html -d build --public-url https://JoseFerAlvarez.github.io/oxygen-shop",
+    "build": "parcel build src/index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "compile": "sass --watch src/scss/styles.scss src/css/styles.css"
