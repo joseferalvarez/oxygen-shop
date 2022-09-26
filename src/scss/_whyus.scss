@@ -2,7 +2,7 @@
     padding-bottom: 10%;
 
     .header__data {
-        margin: 15% 10%;
+        margin: 30% 10% 10% 10%;
 
         .header__title {
             font-size: 2rem;
@@ -45,6 +45,12 @@
 }
 
 @media only screen and (min-width: 1000px) {
+
+    .header {
+        .header__data {
+            margin: 10% 10%;
+        }
+    }
 
     .header__img {
         content: url("../assets/images/background.png");
