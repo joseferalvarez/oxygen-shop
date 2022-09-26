@@ -1,19 +1,17 @@
-.pricing {
+.section__pricing {
     display: block;
 
     .pricing__title {
-        font-family: "Raleway";
-        font-weight: 400;
         font-size: 2.25rem;
         text-align: center;
         margin-top: 50px;
     }
 }
 
-.card__pricing {
+.card__fee {
     display: block;
     margin: 10%;
-    border: 1px solid black;
+    border: 1px solid;
     border-radius: 18px;
 
     .card__price {
@@ -22,25 +20,25 @@
         text-align: center;
 
         .card__price-type {
-            font-family: "Raleway";
+            font-family: var(--font-family-title);
             font-weight: 700;
             font-size: 1.25rem;
         }
 
         .card__price-dollar {
-            font-family: "Open Sans";
+            font-family: var(--font-family-text);
             font-weight: 300;
             font-size: 2.8rem;
         }
 
         .card__price-offer {
-            font-family: "Raleway";
+            font-family: var(--font-family-title);
             font-weight: 700;
             font-size: 0.75rem;
         }
     }
 
-    .card__atributes {
+    .card__benefits {
         margin-top: 40px;
         display: inline-block;
         width: 49%;
@@ -56,15 +54,12 @@
             }
 
             .card__cross {
-
                 height: 15px;
                 width: 15px;
             }
 
             .card__text {
                 margin-left: 10px;
-                font-family: "Open Sans";
-                font-weight: 400;
                 font-size: 0.8rem;
             }
         }
@@ -82,75 +77,90 @@
     }
 }
 
-.card__pricing:hover {
+.card__fee:hover {
     transform: scale(1.10);
+    transition: all 0.5s;
 }
 
-.card__pricing-red {
-    border-color: #FB3B64;
+.card__fee:not(:hover) {
+    transition: all 0.5s;
+}
+
+.card__fee-red {
+    border-color: var(--red-color);
 
     .card__price .card__price-dollar {
-        color: #FB3B64;
+        color: var(--red-color);
     }
 
-    .card__button button {
-        background-color: #FB3B64;
+    .card__button .button {
+        background-color: var(--red-color);
+    }
+
+    .card__button .button:hover {
+        background-color: var(--red-color-hover);
     }
 }
 
-.card__pricing-red:hover {
-    box-shadow: 5px 10px 14px rgba(235, 71, 110, 0.29)
+.card__fee-red:hover,
+.card__fee-red:hover .button {
+    box-shadow: 5px 10px 14px var(--red-color-shadow)
 }
 
-.card__pricing-blue {
-    border-color: #07ACE6;
+.card__fee-blue {
+    border-color: var(--blue-color);
 
     .card__price .card__price-dollar {
-        color: #07ACE6;
+        color: var(--blue-color);
     }
 
-    .card__button button {
-        background-color: #07ACE6;
+    .card__button .button {
+        background-color: var(--blue-color);
+    }
+
+    .card__button .button:hover {
+        background-color: var(--blue-color-hover);
     }
 }
 
-.card__pricing-blue:hover {
-    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29)
+.card__fee-blue:hover,
+.card__fee-blue:hover .button {
+    box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
 
-.card__pricing-green {
-    border-color: #55DFB4;
+.card__fee-green {
+    border-color: var(--green-color);
 
     .card__price .card__price-dollar {
-        color: #55DFB4;
+        color: var(--green-color);
     }
 
-    .card__button button {
-        background-color: #55DFB4;
+    .card__button .button {
+        background-color: var(--green-color);
+    }
+
+    .card__button .button:hover {
+        background-color: var(--green-color-hover);
     }
 }
 
-.card__pricing-green:hover {
-    box-shadow: 5px 10px 14px rgba(85, 223, 180, 0.29)
+.card__fee-green:hover,
+.card__fee-green:hover .button {
+    box-shadow: 5px 10px 14px var(--green-color-shadow);
 }
 
 @media only screen and (min-width: 1000px) {
-
-    .pricing {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .cards__prices {
+    .cards__container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: row;
         margin: 5%;
 
-        .card__pricing {
-            margin: 0%;
-            width: 30%;
+        .card__fee {
+            margin: 0 3% 0 3%;
+            padding: 2% 0 2% 0;
+            width: 25%;
 
             .card__price {
                 display: block;
@@ -158,10 +168,17 @@
                 margin-top: 5%
             }
 
-            .card__atributes {
-                display: block;
+            .card__benefits {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
                 margin: auto;
                 margin-top: 15%;
+            }
+
+            .card__button {
+                top: 60px;
             }
         }
     }

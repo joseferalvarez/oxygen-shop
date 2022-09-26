@@ -15,33 +15,28 @@
   align-content: flex-end;
   margin-right: 30px;
 }
-.topbar .burger__open {
+.topbar .burger-open {
   content: url("../assets/icons/menuopen.svg");
 }
-.topbar .burger__close {
+.topbar .burger-close {
   content: url("../assets/icons/menuclose.svg");
 }
-.topbar .burger__check {
-  opacity: 0;
-}
-.topbar .navigation {
+.topbar .nav {
   margin-top: 40px;
   display: none;
 }
-.topbar .navigation .options li {
+.topbar .nav .nav__li {
+  list-style: none;
   margin: 7px 0;
 }
-.topbar .navigation .anchor {
-  list-style: none;
-}
-.topbar .navigation .anchor a {
-  font-family: "Open Sans";
+.topbar .nav .nav__li .nav__li__a {
+  font-family: var(--font-family-text);
   font-weight: 700;
   text-decoration: none;
   color: black;
   font-size: 0.8rem;
 }
-.topbar .navwatch {
+.topbar .nav-visible {
   display: block;
 }
 
@@ -57,125 +52,105 @@
   .topbar .burger {
     display: none;
   }
-  .topbar .navigation {
+  .topbar .nav {
     display: flex;
     align-items: center;
     margin: 0 50px 0 0;
   }
-  .topbar .navigation .options li {
+  .topbar .nav .nav__options .nav__li {
     margin: 0;
-  }
-  .topbar .navigation .anchor a {
-    color: #A5A5A5;
-    height: 20px;
-  }
-  .topbar .options li {
     display: inline-block;
     padding: 25px 20px 25px 20px;
     border-bottom: 4px solid transparent;
+    transition: all 0.2s;
   }
-  .topbar .options li:hover {
-    border-bottom: 4px solid #08A6E4;
+  .topbar .nav .nav__options .nav__li:hover {
+    border-bottom: 4px solid var(--blue-color);
   }
-  .topbar .options li:hover a {
+  .topbar .nav .nav__options .nav__li .nav__li__a {
+    color: var(--grey-color-text);
+    height: 20px;
+  }
+  .topbar .nav .nav__options .nav__li:hover .nav__li__a {
     color: black;
   }
 }
-.whyus {
+.header {
   padding-bottom: 10%;
 }
-
-.shop {
+.header .header__data {
   margin: 15% 10%;
 }
-.shop .shop__title,
-.shop .shop__text {
+.header .header__data .header__title {
+  font-size: 2rem;
   text-align: center;
 }
-.shop .shop__title {
-  font-family: "Raleway";
-  font-size: 2rem;
-  line-height: 41px;
-  font-weight: 400;
-}
-.shop .shop__text {
+.header .header__data .header__text {
   margin-top: 20px;
-  font-family: "Open Sans";
-  font-weight: 400;
   font-size: 1rem;
-  line-height: 23px;
+  text-align: center;
 }
-.shop .button__container {
-  display: flex;
+.header .header__data .header__button {
   margin-top: 28px;
-  justify-content: center;
 }
-.shop .button__container .button__shop {
+.header .header__data .header__button .button-shop {
   width: 90%;
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
-
-.plaform__title {
+.header .header__img {
+  width: 100%;
+}
+.header .header__platform__h2 {
   margin: 5% 10%;
-  font-family: "Raleway";
   font-weight: 300;
   text-align: center;
   font-size: 1.8rem;
 }
-
-.image__section-first {
-  width: 100%;
-}
-
-.platforms .platform__image {
+.header .header__platform__container .header__platform__img {
   display: block;
   margin: 30px auto;
 }
 
 @media only screen and (min-width: 1000px) {
-  .image__section-first {
+  .header__img {
     content: url("../assets/images/background.png");
   }
-  .platforms {
+  .header__platform__container {
     display: flex;
     justify-content: space-evenly;
   }
-  .platform__image {
+  .header__platform__img {
     justify-content: space-around;
   }
 }
-.benefits {
+.section__benefit {
   display: block;
-  background-color: #F7F7F7;
+  background-color: var(--grey-color-background);
   align-content: center;
   padding: 42px 0px;
 }
 
 .card {
   display: block;
-  background-color: white;
-  margin: 5% 5%;
-  border: 1px solid #E8E9ED;
+  background-color: var(--white-color);
+  margin: 5% 10%;
+  border: 1px solid var(--grey-color-border);
   border-radius: 5px;
 }
-.card .card__text {
+.card .card__description {
   display: block;
-  margin: 5% 5%;
+  margin: 5% 10%;
 }
-.card .card__text .card__title {
-  margin-top: 25px;
-  font-family: "Raleway";
-  font-weight: 400;
+.card .card__description .card__title {
   font-size: 1.8rem;
 }
-.card .card__text .card__description {
-  margin-top: 10px;
-  font-family: "Open Sans";
+.card .card__description .card__text {
+  margin-top: 5%;
   font-size: 0.9rem;
 }
-.card .card__text .card__line {
+.card .card__description .card__line {
   display: none;
-  margin-top: 10%;
+  margin-top: 15%;
   width: 75%;
 }
 .card .card__image {
@@ -184,58 +159,60 @@
 }
 .card .card__image .card__foreground {
   margin: auto;
-  margin-top: 10%;
   width: 60%;
   z-index: 1;
+  margin-top: 10%;
 }
-
-.card__image-first .card__background {
+.card .card__image-first .card__background {
   position: absolute;
   width: 35%;
   right: 40px;
   top: 5%;
 }
-
-.card__image-second .card__background {
+.card .card__image-second .card__background {
   position: absolute;
   align-content: center;
-  left: 20%;
+  left: 22%;
   top: 5%;
   width: 45%;
   margin: auto;
 }
-
-.card__image-third {
+.card .card__image-third {
   width: 100%;
-  background-color: #55DFB4;
+  background-color: var(--green-color);
   border-radius: 5px;
-  border: 1px solid #E8E9ED;
+  border: 1px solid var(--grey-color-border);
 }
-.card__image-third .card__foreground {
+.card .card__image-third .card__foreground {
   position: relative;
-  top: 25%;
+  top: 10%;
   right: 5%;
 }
 
 @media only screen and (min-width: 1000px) {
   .card {
     display: flex;
+    margin: 2% 15%;
     flex-direction: row-reverse;
   }
-  .card .card__text {
-    width: 50%;
+  .card .card__description {
+    margin: 5% 15% 5% 5%;
+    width: 35%;
   }
-  .card .card__text .card__line {
+  .card .card__description .card__text {
+    margin-top: 15%;
+  }
+  .card .card__description .card__line {
     display: block;
   }
-  .card .card__text .card__line-red {
-    border-color: #FB3B64;
+  .card .card__description .card__line-red {
+    border-color: var(--red-color);
   }
-  .card .card__text .card__line-blue {
-    border-color: #08A6E4;
+  .card .card__description .card__line-blue {
+    border-color: var(--blue-color);
   }
-  .card .card__text .card__line-green {
-    border-color: #55DFB4;
+  .card .card__description .card__line-green {
+    border-color: var(--green-color);
   }
   .card .card__image {
     width: 50%;
@@ -244,281 +221,277 @@
     display: flex;
     flex-direction: row;
     padding: 0;
-    background-color: #F7F7F7;
+    background-color: var(--grey-color-background);
     border: 0;
   }
   .card__third .card__image {
     margin-left: 30px;
   }
-  .card__third .card__text {
+  .card__third .card__description {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin: 0 30px 0 0;
     padding: 5%;
-    background-color: white;
-    border: 1px solid #E8E9ED;
+    background-color: var(--white-color);
+    border: 1px solid var(--grey-color-border);
     border-radius: 5px;
     justify-content: center;
   }
 }
-.pricing {
+.section__pricing {
   display: block;
 }
-.pricing .pricing__title {
-  font-family: "Raleway";
-  font-weight: 400;
+.section__pricing .pricing__title {
   font-size: 2.25rem;
   text-align: center;
   margin-top: 50px;
 }
 
-.card__pricing {
+.card__fee {
   display: block;
   margin: 10%;
-  border: 1px solid black;
+  border: 1px solid;
   border-radius: 18px;
 }
-.card__pricing .card__price {
+.card__fee .card__price {
   display: inline-block;
   width: 49%;
   text-align: center;
 }
-.card__pricing .card__price .card__price-type {
-  font-family: "Raleway";
+.card__fee .card__price .card__price-type {
+  font-family: var(--font-family-title);
   font-weight: 700;
   font-size: 1.25rem;
 }
-.card__pricing .card__price .card__price-dollar {
-  font-family: "Open Sans";
+.card__fee .card__price .card__price-dollar {
+  font-family: var(--font-family-text);
   font-weight: 300;
   font-size: 2.8rem;
 }
-.card__pricing .card__price .card__price-offer {
-  font-family: "Raleway";
+.card__fee .card__price .card__price-offer {
+  font-family: var(--font-family-title);
   font-weight: 700;
   font-size: 0.75rem;
 }
-.card__pricing .card__atributes {
+.card__fee .card__benefits {
   margin-top: 40px;
   display: inline-block;
   width: 49%;
 }
-.card__pricing .card__atributes .card__atr {
+.card__fee .card__benefits .card__atr {
   display: flex;
   justify-content: flex-start;
   margin: 10px 0px;
 }
-.card__pricing .card__atributes .card__atr .card__check {
+.card__fee .card__benefits .card__atr .card__check {
   height: 15px;
   width: 15px;
 }
-.card__pricing .card__atributes .card__atr .card__cross {
+.card__fee .card__benefits .card__atr .card__cross {
   height: 15px;
   width: 15px;
 }
-.card__pricing .card__atributes .card__atr .card__text {
+.card__fee .card__benefits .card__atr .card__text {
   margin-left: 10px;
-  font-family: "Open Sans";
-  font-weight: 400;
   font-size: 0.8rem;
 }
-.card__pricing .card__button {
+.card__fee .card__button {
   display: flex;
   justify-content: center;
   position: relative;
   top: 20px;
 }
-.card__pricing .card__button .button {
+.card__fee .card__button .button {
   width: 40%;
 }
 
-.card__pricing:hover {
+.card__fee:hover {
   transform: scale(1.1);
+  transition: all 0.5s;
 }
 
-.card__pricing-red {
-  border-color: #FB3B64;
-}
-.card__pricing-red .card__price .card__price-dollar {
-  color: #FB3B64;
-}
-.card__pricing-red .card__button button {
-  background-color: #FB3B64;
+.card__fee:not(:hover) {
+  transition: all 0.5s;
 }
 
-.card__pricing-red:hover {
-  box-shadow: 5px 10px 14px rgba(235, 71, 110, 0.29);
+.card__fee-red {
+  border-color: var(--red-color);
+}
+.card__fee-red .card__price .card__price-dollar {
+  color: var(--red-color);
+}
+.card__fee-red .card__button .button {
+  background-color: var(--red-color);
+}
+.card__fee-red .card__button .button:hover {
+  background-color: var(--red-color-hover);
 }
 
-.card__pricing-blue {
-  border-color: #07ACE6;
-}
-.card__pricing-blue .card__price .card__price-dollar {
-  color: #07ACE6;
-}
-.card__pricing-blue .card__button button {
-  background-color: #07ACE6;
+.card__fee-red:hover,
+.card__fee-red:hover .button {
+  box-shadow: 5px 10px 14px var(--red-color-shadow);
 }
 
-.card__pricing-blue:hover {
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+.card__fee-blue {
+  border-color: var(--blue-color);
+}
+.card__fee-blue .card__price .card__price-dollar {
+  color: var(--blue-color);
+}
+.card__fee-blue .card__button .button {
+  background-color: var(--blue-color);
+}
+.card__fee-blue .card__button .button:hover {
+  background-color: var(--blue-color-hover);
 }
 
-.card__pricing-green {
-  border-color: #55DFB4;
-}
-.card__pricing-green .card__price .card__price-dollar {
-  color: #55DFB4;
-}
-.card__pricing-green .card__button button {
-  background-color: #55DFB4;
+.card__fee-blue:hover,
+.card__fee-blue:hover .button {
+  box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
 
-.card__pricing-green:hover {
-  box-shadow: 5px 10px 14px rgba(85, 223, 180, 0.29);
+.card__fee-green {
+  border-color: var(--green-color);
+}
+.card__fee-green .card__price .card__price-dollar {
+  color: var(--green-color);
+}
+.card__fee-green .card__button .button {
+  background-color: var(--green-color);
+}
+.card__fee-green .card__button .button:hover {
+  background-color: var(--green-color-hover);
+}
+
+.card__fee-green:hover,
+.card__fee-green:hover .button {
+  box-shadow: 5px 10px 14px var(--green-color-shadow);
 }
 
 @media only screen and (min-width: 1000px) {
-  .pricing {
-    display: flex;
-    flex-direction: column;
-  }
-  .cards__prices {
+  .cards__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     margin: 5%;
   }
-  .cards__prices .card__pricing {
-    margin: 0%;
-    width: 30%;
+  .cards__container .card__fee {
+    margin: 0 3% 0 3%;
+    padding: 2% 0 2% 0;
+    width: 25%;
   }
-  .cards__prices .card__pricing .card__price {
+  .cards__container .card__fee .card__price {
     display: block;
     margin: auto;
     margin-top: 5%;
   }
-  .cards__prices .card__pricing .card__atributes {
-    display: block;
+  .cards__container .card__fee .card__benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin: auto;
     margin-top: 15%;
   }
+  .cards__container .card__fee .card__button {
+    top: 60px;
+  }
 }
-.contact .contact__questions {
+.section__contact .contact__info .contact__questions {
   margin-left: 30px;
-  font-family: "Raleway";
-  font-weight: 400;
   font-size: 2.5rem;
 }
-.contact .contact__text {
+.section__contact .contact__info .contact__text {
   margin-left: 30px;
-  font-family: "Open Sans";
-  font-weight: 400;
   font-size: 1rem;
 }
-.contact .contact__data {
+.section__contact .contact__info .contact__data {
   margin: 30px 0 0 30px;
 }
-.contact .contact__data .contact__email {
-  display: flex;
-}
-.contact .contact__data .contact__email .contact__email-icon {
-  background-image: url("../assets/mail.svg");
+.section__contact .contact__info .contact__data .contact__icon {
   width: 20px;
   height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.contact .contact__data .contact__email .contact__email-text {
-  color: #A5A5A5;
-  font-family: "Open Sans";
+.section__contact .contact__info .contact__data .contact__text {
+  color: var(--grey-color-text);
+  font-family: var(--font-family-text);
+  margin-left: 5px;
   font-weight: 600;
 }
-.contact .contact__data .contact__phone {
+.section__contact .contact__info .contact__data .contact__email {
   display: flex;
-  margin-top: 5px;
 }
-.contact .contact__data .contact__phone .contact__phone-icon {
-  background-image: url("../assets/phone.svg");
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.section__contact .contact__info .contact__data .contact__phone {
+  display: flex;
 }
-.contact .contact__data .contact__phone .contact__phone-text {
-  color: #A5A5A5;
-  font-family: "Open Sans";
-  font-weight: 600;
-}
-.contact .contact__part2 {
+.section__contact .contact__form {
   margin: 30px 0 0 30px;
 }
-.contact .contact__part2 .contact__input {
+.section__contact .contact__form .contact__input {
   margin: 10px 0 10px 0;
 }
-.contact .contact__input-text {
-  font-family: "Open Sans";
+.section__contact .contact__input-text {
+  font-family: var(--font-family-text);
   font-weight: 600;
-  color: #08A6E4;
+  color: var(--blue-color);
 }
-.contact .contact__input-input {
-  border: 0;
+.section__contact .contact__input-input {
+  border: none;
   width: 90%;
-  border-bottom: 1px solid #95989A;
-  font-family: "Open Sans";
-  font-weight: 400;
+  border-bottom: 1px solid var(--grey-color-input);
   font-size: 1rem;
 }
-.contact .contact__policies {
+.section__contact .contact__policies {
   display: flex;
   margin-top: 30px;
   margin-left: 26px;
 }
-.contact .contact__policies .contact__policies-checkbox {
+.section__contact .contact__policies .contact__policies-checkbox {
   width: 24px;
   height: 24px;
 }
-.contact .contact__policies .contact__policies-text {
+.section__contact .contact__policies .contact__policies-text {
   margin: 0px 30px 30px 10px;
   width: 90%;
-  font-family: "Open Sans";
-  font-weight: 400;
   font-size: 0.75rem;
-  color: #707070;
+  color: var(--grey-color-policies);
 }
-.contact .contact__button {
+.section__contact .contact__button {
   display: flex;
   justify-content: flex-end;
   margin: 0px 30px 30px 0px;
 }
-.contact .contact__button .button {
+.section__contact .contact__button .button {
   width: 60%;
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
 
 @media only screen and (min-width: 1000px) {
-  .contact {
+  .section__contact {
     display: flex;
     justify-content: center;
     margin-top: 150px;
   }
-  .contact .contact__part1 {
-    width: 40%;
+  .section__contact .contact__info {
+    width: 35%;
   }
-  .contact .contact__part1 .contact__data {
+  .section__contact .contact__info .contact__data {
     display: flex;
     margin-top: 38px;
     margin-left: 32px;
   }
-  .contact .contact__part1 .contact__data .contact__phone {
+  .section__contact .contact__info .contact__phone {
     margin-left: 20px;
   }
-  .contact .contact__part2 {
-    width: 40%;
+  .section__contact .contact__form {
+    margin-top: 0px;
+    width: 30%;
   }
-  .contact .contact__part2 .contact__input {
+  .section__contact .contact__form .contact__input {
     margin: 10px 0 10px 0;
   }
 }
@@ -533,21 +506,20 @@
   width: 175px;
 }
 .footer .footer__logo .footer__rights {
-  font-family: "Open Sans";
-  font-weight: 400;
   font-size: 0.7rem;
 }
-.footer .social-media .social-media__twitter {
+.footer .social-media .social-media__icon {
   width: 24px;
   height: 24px;
 }
 .footer .social-media .social-media__facebook {
   margin-left: 10px;
-  width: 24px;
-  height: 24px;
 }
 
 @media only screen and (min-width: 1000px) {
+  .footer__logo {
+    margin-left: 5%;
+  }
   .social-media {
     margin-right: 5%;
   }
@@ -559,13 +531,55 @@
 
 .button {
   color: white;
-  background-color: #08A6E4;
+  background-color: var(--blue-color);
   border-radius: 40px;
   padding: 20px 30px;
   border: none;
-  font-family: "Open Sans";
+  font-family: var(--font-family-text);
   font-size: 1rem;
   max-width: 440px;
+}
+.button:hover {
+  background-color: var(--blue-color-hover);
+  transition: background-color 0.5s;
+}
+.button:not(:hover) {
+  transition: background-color 0.5s;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+}
+
+.text {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+}
+
+:root {
+  --blue-color: #08A6E4;
+  --blue-color-hover: #078fc5;
+  --blue-color-shadow: #07ace64a;
+  --red-color: #FB3B64;
+  --red-color-hover: #fa1e4e;
+  --red-color-shadow: #eb476e4a;
+  --green-color: #55DFB4;
+  --green-color-hover: #29d69f;
+  --green-color-shadow: #55dfb44a;
+  --white-color: #FFFFFF;
+  --grey-color-text: #A5A5A5;
+  --grey-color-border: #E8E9ED;
+  --grey-color-background: #F7F7F7;
+  --grey-color-input: #95989A;
+  --grey-color-policies: #707070;
+  --font-family-text: "Open Sans";
+  --font-family-title: "Raleway";
 }
 
 * {

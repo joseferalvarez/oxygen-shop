@@ -1,60 +1,44 @@
-.contact {
-    .contact__questions {
-        margin-left: 30px;
-        font-family: "Raleway";
-        font-weight: 400;
-        font-size: 2.5rem;
-    }
+.section__contact {
 
-    .contact__text {
-        margin-left: 30px;
-        font-family: "Open Sans";
-        font-weight: 400;
-        font-size: 1rem;
-    }
+    .contact__info {
+        .contact__questions {
+            margin-left: 30px;
+            font-size: 2.5rem;
+        }
 
-    .contact__data {
-        margin: 30px 0 0 30px;
+        .contact__text {
+            margin-left: 30px;
+            font-size: 1rem;
+        }
 
-        .contact__email {
-            display: flex;
+        .contact__data {
+            margin: 30px 0 0 30px;
 
-            .contact__email-icon {
-                background-image: url("../assets/mail.svg");
+            .contact__icon {
                 width: 20px;
                 height: 20px;
                 background-size: contain;
                 background-repeat: no-repeat;
             }
 
-            .contact__email-text {
-                color: #A5A5A5;
-                font-family: "Open Sans";
+            .contact__text {
+                color: var(--grey-color-text);
+                font-family: var(--font-family-text);
+                margin-left: 5px;
                 font-weight: 600;
             }
-        }
 
-        .contact__phone {
-            display: flex;
-            margin-top: 5px;
-
-            .contact__phone-icon {
-                background-image: url("../assets/phone.svg");
-                width: 20px;
-                height: 20px;
-                background-size: contain;
-                background-repeat: no-repeat;
+            .contact__email {
+                display: flex;
             }
 
-            .contact__phone-text {
-                color: #A5A5A5;
-                font-family: "Open Sans";
-                font-weight: 600;
+            .contact__phone {
+                display: flex;
             }
         }
     }
 
-    .contact__part2 {
+    .contact__form {
         margin: 30px 0 0 30px;
 
         .contact__input {
@@ -63,17 +47,15 @@
     }
 
     .contact__input-text {
-        font-family: "Open Sans";
+        font-family: var(--font-family-text);
         font-weight: 600;
-        color: #08A6E4;
+        color: var(--blue-color);
     }
 
     .contact__input-input {
-        border: 0;
+        border: none;
         width: 90%;
-        border-bottom: 1px solid #95989A;
-        font-family: "Open Sans";
-        font-weight: 400;
+        border-bottom: 1px solid var(--grey-color-input);
         font-size: 1rem;
     }
 
@@ -90,10 +72,8 @@
         .contact__policies-text {
             margin: 0px 30px 30px 10px;
             width: 90%;
-            font-family: "Open Sans";
-            font-weight: 400;
             font-size: 0.75rem;
-            color: #707070;
+            color: var(--grey-color-policies);
         }
 
     }
@@ -105,33 +85,34 @@
 
         .button {
             width: 60%;
-            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            box-shadow: 5px 10px 14px var(--blue-color-shadow)
         }
     }
 }
 
 @media only screen and (min-width: 1000px) {
-    .contact {
+    .section__contact {
         display: flex;
         justify-content: center;
         margin-top: 150px;
 
-        .contact__part1 {
-            width: 40%;
+        .contact__info {
+            width: 35%;
 
             .contact__data {
                 display: flex;
                 margin-top: 38px;
                 margin-left: 32px;
+            }
 
-                .contact__phone {
-                    margin-left: 20px;
-                }
+            .contact__phone {
+                margin-left: 20px;
             }
         }
 
-        .contact__part2 {
-            width: 40%;
+        .contact__form {
+            margin-top: 0px;
+            width: 30%;
 
             .contact__input {
                 margin: 10px 0 10px 0;

@@ -1,7 +1,7 @@
 const burger = document.querySelector(".burger");
-const menu = document.querySelector(".navigation");
+const menu = document.querySelector(".nav");
 
 burger.addEventListener("click", () => {
-    menu.classList.toggle("navwatch");
-    burger.classList.toggle("burger__close");
+    menu.classList.toggle("nav-visible");
+    burger.classList.toggle("burger-close");
 });

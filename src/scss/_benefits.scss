@@ -1,37 +1,33 @@
-.benefits {
+.section__benefit {
     display: block;
-    background-color: #F7F7F7;
+    background-color: var(--grey-color-background);
     align-content: center;
     padding: 42px 0px;
 }
 
 .card {
     display: block;
-    background-color: white;
-    margin: 5% 5%;
-    border: 1px solid #E8E9ED;
+    background-color: var(--white-color);
+    margin: 5% 10%;
+    border: 1px solid var(--grey-color-border);
     border-radius: 5px;
 
-    .card__text {
+    .card__description {
         display: block;
-        margin: 5% 5%;
+        margin: 5% 10%;
 
         .card__title {
-            margin-top: 25px;
-            font-family: "Raleway";
-            font-weight: 400;
             font-size: 1.8rem;
         }
 
-        .card__description {
-            margin-top: 10px;
-            font-family: "Open Sans";
+        .card__text {
+            margin-top: 5%;
             font-size: 0.9rem;
         }
 
         .card__line {
             display: none;
-            margin-top: 10%;
+            margin-top: 15%;
             width: 75%;
         }
     }
@@ -42,70 +38,76 @@
 
         .card__foreground {
             margin: auto;
-            margin-top: 10%;
             width: 60%;
             z-index: 1;
+            margin-top: 10%;
         }
     }
 
-}
+    .card__image-first {
+        .card__background {
+            position: absolute;
+            width: 35%;
+            right: 40px;
+            top: 5%;
+        }
+    }
 
-.card__image-first {
-    .card__background {
-        position: absolute;
-        width: 35%;
-        right: 40px;
-        top: 5%;
+    .card__image-second {
+        .card__background {
+            position: absolute;
+            align-content: center;
+            left: 22%;
+            top: 5%;
+            width: 45%;
+            margin: auto;
+        }
+    }
+
+    .card__image-third {
+        width: 100%;
+        background-color: var(--green-color);
+        border-radius: 5px;
+        border: 1px solid var(--grey-color-border);
+
+        .card__foreground {
+            position: relative;
+            top: 10%;
+            right: 5%;
+        }
     }
 }
 
-.card__image-second {
-    .card__background {
-        position: absolute;
-        align-content: center;
-        left: 20%;
-        top: 5%;
-        width: 45%;
-        margin: auto;
-    }
-}
-
-.card__image-third {
-    width: 100%;
-    background-color: #55DFB4;
-    border-radius: 5px;
-    border: 1px solid #E8E9ED;
-
-    .card__foreground {
-        position: relative;
-        top: 25%;
-        right: 5%;
-    }
-}
 
 @media only screen and (min-width: 1000px) {
 
     .card {
         display: flex;
+        margin: 2% 15%;
         flex-direction: row-reverse;
 
-        .card__text {
-            width: 50%;
+        .card__description {
+            margin: 5% 15% 5% 5%;
+            width: 35%;
+
+            .card__text {
+                margin-top: 15%;
+            }
 
             .card__line {
                 display: block;
             }
 
             .card__line-red {
-                border-color: #FB3B64;
+                border-color: var(--red-color);
             }
 
             .card__line-blue {
-                border-color: #08A6E4;
+                border-color: var(--blue-color);
             }
 
             .card__line-green {
-                border-color: #55DFB4;
+                border-color: var(--green-color);
             }
         }
 
@@ -119,21 +121,21 @@
         display: flex;
         flex-direction: row;
         padding: 0;
-        background-color: #F7F7F7;
+        background-color: var(--grey-color-background);
         border: 0;
 
         .card__image {
             margin-left: 30px;
         }
 
-        .card__text {
+        .card__description {
             display: flex;
             flex-direction: column;
             width: 60%;
             margin: 0 30px 0 0;
             padding: 5%;
-            background-color: white;
-            border: 1px solid #E8E9ED;
+            background-color: var(--white-color);
+            border: 1px solid var(--grey-color-border);
             border-radius: 5px;
             justify-content: center;
         }

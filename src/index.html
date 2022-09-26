@@ -10,51 +10,48 @@
 </head>
 
 <body>
-    <div class="topbar">
+    <nav class="topbar">
         <div class="topbar__container">
             <a href="./index.html"><img class="logo" src="./assets/icons/logo.svg" alt="Oxygenshop"></a>
-            <img class="burger burger__open" src="./assets/icons/menuopen.svg" alt="">
+            <img class="burger burger-open" src="./assets/icons/menuopen.svg" alt="">
         </div>
-        <nav class="navigation">
-            <ul class="options">
-                <li class="anchor"><a href="#anchor-whyus">WHY US</a></li>
-                <li class="anchor"><a href="#anchor-benefits">BENEFITS</a></li>
-                <li class="anchor"><a href="#anchor-pricing">PRICES</a></li>
-                <li class="anchor"><a href="#anchor-contact">CONTACT</a></li>
+        <div class="nav">
+            <ul class="nav__options">
+                <li class="nav__li"><a class="nav__li__a" href="#anchor-whyus">WHY US</a></li>
+                <li class="nav__li"><a class="nav__li__a" href="#anchor-benefits">BENEFITS</a></li>
+                <li class="nav__li"><a class="nav__li__a" href="#anchor-pricing">PRICES</a></li>
+                <li class="nav__li"><a class="nav__li__a" href="#anchor-contact">CONTACT</a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
-    <section class="whyus" id="anchor-whyus">
-        <div class="shop">
-            <h1 class="shop__title">Sell More!</h1>
-            <h3 class="shop__text">Open shop on our platform and
+    <header class="header" id="anchor-whyus">
+        <div class="header__data">
+            <h1 class="title header__title">Sell More!</h1>
+            <h3 class="text header__text">Open shop on our platform and
                 increase your sales</h3>
-            <div class="button__container">
-                <button class="button button__shop">Open your shop</button>
+            <div class="button__container header__button">
+                <button class="button button-shop">Open your shop</button>
             </div>
         </div>
-        <img class="image__section-first" src="./assets/images/backgroundmobile.png" alt="Setup office">
-        <h2 class="plaform__title">The most popular sales platform in country</h2>
-        <div class="platforms">
-            <img class="platform__image platform__image-first" src="./assets/icons/card1section1.svg"
-                alt="Daily entries">
-            <img class="platform__image platform__image-second" src="./assets/icons/card2section1.svg"
-                alt="Seen products every day">
-            <img class="platform__image platform__image-third" src="./assets/icons/card3section1.svg"
-                alt="Added post daily">
+        <img class="header__img" src="./assets/images/backgroundmobile.png" alt="Setup office">
+        <h2 class="title header__platform__h2">The most popular sales platform in country</h2>
+        <div class="header__platform__container">
+            <img class="header__platform__img" src="./assets/icons/card1section1.svg" alt="Daily entries">
+            <img class="header__platform__img" src="./assets/icons/card2section1.svg" alt="Seen products every day">
+            <img class="header__platform__img" src="./assets/icons/card3section1.svg" alt="Added post daily">
         </div>
-    </section>
+    </header>
 
-    <section class="benefits" id="anchor-benefits">
+    <section class="section__benefit" id="anchor-benefits">
         <div class="card">
             <div class="card__image card__image-first">
                 <img class="card__background" src="./assets/icons/rectangle.svg" alt="Red rectagle">
                 <img class="card__foreground" src="./assets/images/macbook.png" alt="Macbook laptop">
             </div>
-            <div class="card__text">
-                <h2 class="card__title">Be always first</h2>
-                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <div class="card__description">
+                <h2 class="title card__title">Be always first</h2>
+                <p class="text card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
                     incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -66,9 +63,9 @@
                 <img class="card__background" src="./assets/icons/circle.svg" alt="Blue circle">
                 <img class="card__foreground" src="./assets/images/iphone.png" alt="Smartphone iphone">
             </div>
-            <div class="card__text">
-                <h2 class="card__title">Your shop is where you are!</h2>
-                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <div class="card__description">
+                <h2 class="title card__title">Your shop is where you are!</h2>
+                <p class="text card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
                     incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -77,9 +74,9 @@
         </div>
 
         <div class="card card__third">
-            <div class="card__text">
-                <h2 class="card__title">Increase recognition your brand!</h2>
-                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <div class="card__description">
+                <h2 class="title card__title">Increase recognition your brand!</h2>
+                <p class="text card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
                     incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -91,35 +88,37 @@
         </div>
     </section>
 
-    <section class="pricing" id="anchor-pricing">
-        <h2 class="pricing__title">Pricing</h2>
-        <div class="cards__prices">
-            <div class="card__pricing card__pricing-red">
+    <section class="section__pricing" id="anchor-pricing">
+        <h2 class="title pricing__title">Pricing</h2>
+
+        <div class="cards__container">
+
+            <div class="card__fee card__fee-red">
                 <div class="card__price">
                     <h2 class="card__price-type">Basic</h2>
                     <p class="card__price-dollar">$0</p>
                     <p class="card__price-offer">&nbsp</p>
                 </div>
-                <div class="card__atributes">
+                <div class="card__benefits">
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">100 MB HDD</p>
+                        <p class="text card__text">100 MB HDD</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">1 Subdomain</p>
+                        <p class="text card__text">1 Subdomain</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">2 E-mails</p>
+                        <p class="text card__text">2 E-mails</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__cross" src="./assets/icons/cross.svg" alt="Cross">
-                        <p class="card__text">Two years license</p>
+                        <p class="text card__text">Two years license</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__cross" src="./assets/icons/cross.svg" alt="Cross">
-                        <p class="card__text">Full support</p>
+                        <p class="text card__text">Full support</p>
                     </div>
                 </div>
                 <div class="card__button">
@@ -127,32 +126,32 @@
                 </div>
             </div>
 
-            <div class="card__pricing card__pricing-blue">
+            <div class="card__fee card__fee-blue">
                 <div class="card__price">
                     <h2 class="card__price-type">Professional</h2>
                     <p class="card__price-dollar">$25</p>
                     <p class="card__price-offer">Limited offer</p>
                 </div>
-                <div class="card__atributes">
+                <div class="card__benefits">
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">500 MB HDD</p>
+                        <p class="text card__text">500 MB HDD</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">2 Subdomains</p>
+                        <p class="text card__text">2 Subdomains</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">5 E-mails</p>
+                        <p class="text card__text">5 E-mails</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">One year license</p>
+                        <p class="text card__text">One year license</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__cross" src="./assets/icons/cross.svg" alt="Cross">
-                        <p class="card__text">Full support</p>
+                        <p class="text card__text">Full support</p>
                     </div>
                 </div>
                 <div class="card__button">
@@ -160,32 +159,32 @@
                 </div>
             </div>
 
-            <div class="card__pricing card__pricing-green">
+            <div class="card__fee card__fee-green">
                 <div class="card__price">
                     <h2 class="card__price-type">Premium</h2>
                     <p class="card__price-dollar">$60</p>
                     <p class="card__price-offer">Limited offer</p>
                 </div>
-                <div class="card__atributes">
+                <div class="card__benefits">
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">2 GB HDD</p>
+                        <p class="text card__text">2 GB HDD</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">5 Subdomains</p>
+                        <p class="text card__text">5 Subdomains</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">20 E-mails</p>
+                        <p class="text card__text">20 E-mails</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">Two years license</p>
+                        <p class="text card__text">Two years license</p>
                     </div>
                     <div class="card__atr">
                         <img class="card__check" src="./assets/icons/check.svg" alt="Check">
-                        <p class="card__text">Full support</p>
+                        <p class="text card__text">Full support</p>
                     </div>
                 </div>
                 <div class="card__button">
@@ -195,34 +194,34 @@
         </div>
     </section>
 
-    <section class="contact" id="anchor-contact">
-
-        <div class="contact__part1">
-            <h2 class="contact__questions">Any questions?</h2>
-            <p class="contact__text">Leave your email address or call us!</p>
+    <section class="section__contact" id="anchor-contact">
+        <div class="contact__info">
+            <h2 class="title contact__questions">Any questions?</h2>
+            <p class="text contact__text">Leave your email address or call us!</p>
 
             <div class="contact__data">
                 <div class="contact__email">
-                    <img class="contact__email-icon" src="./assets/icons/mail.svg" alt="Email">
-                    <p class="contact__email-text">info@bestshop.xyz</p>
+                    <img class="contact__icon" src="./assets/icons/mail.svg" alt="Email">
+                    <p class="contact__text">info@bestshop.xyz</p>
                 </div>
 
                 <div class="contact__phone">
-                    <img class="contact__phone-icon" src="./assets/icons/phone.svg" alt="Phone">
-                    <p class="contact__phone-text">123 456 789</p>
+                    <img class="contact__icon" src="./assets/icons/phone.svg" alt="Phone">
+                    <p class="contact__text">123 456 789</p>
                 </div>
             </div>
         </div>
 
-        <div class="contact__part2">
+        <div class="contact__form">
             <p class="contact__input contact__input-text">NAME</p>
-            <input class="contact__input contact__input-input" type="text">
+            <input class="contact__input text contact__input-input" type="text">
             <p class="contact__input contact__input-text">EMAIL</p>
-            <input class="contact__input contact__input-input" type="text">
+            <input class="contact__input text contact__input-input" type="text">
 
             <div class="contact__policies">
                 <input class="contact__policies-checkbox" type="checkbox">
-                <p class="contact__policies-text">I hereby give consent for my personal data included in my application
+                <p class="text contact__policies-text">I hereby give consent for my personal data included in my
+                    application
                     to
                     be processed for the purposes of the recruitment process under the European Parliament’s and Council
                     of
@@ -241,13 +240,13 @@
     <footer class="footer">
         <div class="footer__logo">
             <img class="logo" src="./assets/icons/logo.svg">
-            <p class="footer__rights">© 2022 OXYGEN, All Rights Reserved</p>
+            <p class="text footer__rights">© 2022 OXYGEN, All Rights Reserved</p>
         </div>
         <div class="social-media">
-            <a href="https://twitter.com/"><img class="social-media__twitter" src="./assets/icons/twitter.svg"
-                    alt="Twitter"></a>
-            <a href="https://facebook.com/"><img class="social-media__facebook" src="./assets/icons/facebook.svg"
-                    alt="Facebook"></a>
+            <a href="https://twitter.com/"><img class="social-media__icon social-media__twitter"
+                    src="./assets/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://facebook.com/"><img class="social-media__icon social-media__facebook"
+                    src="./assets/icons/facebook.svg" alt="Facebook"></a>
         </div>
     </footer>
 </body>

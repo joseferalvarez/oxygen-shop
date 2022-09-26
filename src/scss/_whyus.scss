@@ -1,76 +1,61 @@
-.whyus {
+.header {
     padding-bottom: 10%;
-}
 
-.shop {
-    margin: 15% 10%;
+    .header__data {
+        margin: 15% 10%;
 
-    .shop__title,
-    .shop__text {
-        text-align: center;
-    }
+        .header__title {
+            font-size: 2rem;
+            text-align: center;
+        }
 
-    .shop__title {
-        font-family: "Raleway";
-        font-size: 2rem;
-        line-height: 41px;
-        font-weight: 400;
-    }
+        .header__text {
+            margin-top: 20px;
+            font-size: 1rem;
+            text-align: center;
+        }
 
-    .shop__text {
-        margin-top: 20px;
-        font-family: "Open Sans";
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 23px;
-    }
+        .header__button {
+            margin-top: 28px;
 
-    .button__container {
-        display: flex;
-        margin-top: 28px;
-        justify-content: center;
-
-        .button__shop {
-            width: 90%;
-            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            .button-shop {
+                width: 90%;
+                box-shadow: 5px 10px 14px var(--blue-color-shadow);
+            }
         }
     }
 
-}
+    .header__img {
+        width: 100%;
+    }
 
-.plaform__title {
-    margin: 5% 10%;
-    font-family: "Raleway";
-    font-weight: 300;
-    text-align: center;
-    font-size: 1.8rem;
-}
+    .header__platform__h2 {
+        margin: 5% 10%;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1.8rem;
+    }
 
-
-.image__section-first {
-    width: 100%;
-}
-
-.platforms {
-
-    .platform__image {
-        display: block;
-        margin: 30px auto;
+    .header__platform__container {
+        .header__platform__img {
+            display: block;
+            margin: 30px auto;
+        }
     }
 }
 
 @media only screen and (min-width: 1000px) {
 
-    .image__section-first {
+    .header__img {
         content: url("../assets/images/background.png");
     }
 
-    .platforms {
+    .header__platform__container {
         display: flex;
         justify-content: space-evenly;
     }
 
-    .platform__image {
+    .header__platform__img {
         justify-content: space-around;
     }
 }

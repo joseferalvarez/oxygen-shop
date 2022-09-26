@@ -1,1 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400&display=swap');
+
+:root {
+    --blue-color: #08A6E4;
+    --blue-color-hover: #078fc5;
+    --blue-color-shadow: #07ace64a;
+    --red-color: #FB3B64;
+    --red-color-hover: #fa1e4e;
+    --red-color-shadow: #eb476e4a;
+    --green-color: #55DFB4;
+    --green-color-hover: #29d69f;
+    --green-color-shadow: #55dfb44a;
+    --white-color: #FFFFFF;
+    --grey-color-text: #A5A5A5;
+    --grey-color-border: #E8E9ED;
+    --grey-color-background: #F7F7F7;
+    --grey-color-input: #95989A;
+    --grey-color-policies: #707070;
+
+    --font-family-text: "Open Sans";
+    --font-family-title: "Raleway";
+}

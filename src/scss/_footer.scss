@@ -12,28 +12,29 @@
         }
 
         .footer__rights {
-            font-family: "Open Sans";
-            font-weight: 400;
             font-size: 0.7rem;
         }
     }
 
     .social-media {
 
-        .social-media__twitter {
+        .social-media__icon {
             width: 24px;
             height: 24px;
         }
 
         .social-media__facebook {
             margin-left: 10px;
-            width: 24px;
-            height: 24px;
+
         }
     }
 }
 
 @media only screen and (min-width: 1000px) {
+    .footer__logo {
+        margin-left: 5%;
+    }
+
     .social-media {
         margin-right: 5%;
     }

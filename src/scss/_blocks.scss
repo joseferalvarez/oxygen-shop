@@ -5,12 +5,35 @@
 
 .button {
     color: white;
-    background-color: #08A6E4;
+    background-color: var(--blue-color);
     border-radius: 40px;
     padding: 20px 30px;
     border: none;
-    font-family: "Open Sans";
+    font-family: var(--font-family-text);
     font-size: 1rem;
-
     max-width: 440px;
+
+    &:hover {
+        background-color: var(--blue-color-hover);
+        transition: background-color 0.5s;
+    }
+
+    &:not(:hover) {
+        transition: background-color 0.5s;
+    }
+}
+
+.button__container {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: var(--font-family-title);
+    font-weight: 400;
+}
+
+.text {
+    font-family: var(--font-family-text);
+    font-weight: 400;
 }
