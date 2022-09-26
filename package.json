@@ -12,7 +12,7 @@
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "compile": "sass --watch src/scss/styles.scss src/css/styles.css"
   }
 }

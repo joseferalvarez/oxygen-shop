@@ -2348,7 +2348,7 @@
 76/home/alvaraaz/Workspaces/oxygen-shop/node_modules/css-tree/lib/syntax/scope1664199406483029455 1
 87/home/alvaraaz/Workspaces/oxygen-shop/node_modules/@parcel/package-manager/package.json1664199414295641946 0
 82/home/alvaraaz/Workspaces/oxygen-shop/node_modules/caniuse-lite/data/regions/FM.js1664199407500024146 0
-50/home/alvaraaz/Workspaces/oxygen-shop/package.json1664199641660717263 0
+50/home/alvaraaz/Workspaces/oxygen-shop/package.json1664199708722224165 0
 70/home/alvaraaz/Workspaces/oxygen-shop/node_modules/lodash/isElement.js1664175801777726085 0
 56/home/alvaraaz/Workspaces/oxygen-shop/node_modules/@lmdb1664199436546187442 1
 133/home/alvaraaz/Workspaces/oxygen-shop/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub/a1664199409337293506 1
