@@ -1,11 +1,11 @@
+@use "./variables";
+@use "./blocks";
 @use "./topbar";
 @use "./whyus";
 @use "./benefits";
 @use "./prices";
 @use "./contact";
 @use "./footer";
-@use "./blocks";
-@use "./imports";
 
 * {
     box-sizing: border-box;
@@ -16,5 +16,3 @@
 body {
     min-width: 320px;
 }
-
-@media only screen and (min-width: 1000px) {}

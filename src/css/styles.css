@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400&display=swap");
+:root {
+  --blue-color: #08A6E4;
+  --blue-color-hover: #078fc5;
+  --blue-color-shadow: #07ace64a;
+  --red-color: #FB3B64;
+  --red-color-hover: #fa1e4e;
+  --red-color-shadow: #eb476e4a;
+  --green-color: #55DFB4;
+  --green-color-hover: #29d69f;
+  --green-color-shadow: #55dfb44a;
+  --white-color: #FFFFFF;
+  --grey-color-text: #A5A5A5;
+  --grey-color-border: #E8E9ED;
+  --grey-color-background: #F7F7F7;
+  --grey-color-input: #95989A;
+  --grey-color-policies: #707070;
+  --font-family-text: "Open Sans";
+  --font-family-title: "Raleway";
+}
+
+.logo {
+  width: 206px;
+  height: 37px;
+}
+
+.button {
+  color: white;
+  background-color: var(--blue-color);
+  border-radius: 40px;
+  padding: 20px 30px;
+  border: none;
+  font-family: var(--font-family-text);
+  font-size: 1rem;
+  max-width: 440px;
+}
+.button:hover {
+  background-color: var(--blue-color-hover);
+  transition: background-color 0.5s;
+}
+.button:not(:hover) {
+  transition: background-color 0.5s;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+}
+
+.text {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+}
+
 .topbar {
   padding: 20px 0px 20px 25px;
   width: 100%;
@@ -254,6 +312,13 @@
   border: 1px solid;
   border-radius: 18px;
 }
+.card__fee:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.card__fee:not(:hover) {
+  transition: all 0.5s;
+}
 .card__fee .card__price {
   display: inline-block;
   width: 49%;
@@ -306,15 +371,6 @@
   width: 40%;
 }
 
-.card__fee:hover {
-  transform: scale(1.1);
-  transition: all 0.5s;
-}
-
-.card__fee:not(:hover) {
-  transition: all 0.5s;
-}
-
 .card__fee-red {
   border-color: var(--red-color);
 }
@@ -327,9 +383,7 @@
 .card__fee-red .card__button .button:hover {
   background-color: var(--red-color-hover);
 }
-
-.card__fee-red:hover,
-.card__fee-red:hover .button {
+.card__fee-red:hover, .card__fee-red:hover .button {
   box-shadow: 5px 10px 14px var(--red-color-shadow);
 }
 
@@ -345,9 +399,7 @@
 .card__fee-blue .card__button .button:hover {
   background-color: var(--blue-color-hover);
 }
-
-.card__fee-blue:hover,
-.card__fee-blue:hover .button {
+.card__fee-blue:hover, .card__fee-blue:hover .button {
   box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
 
@@ -363,9 +415,7 @@
 .card__fee-green .card__button .button:hover {
   background-color: var(--green-color-hover);
 }
-
-.card__fee-green:hover,
-.card__fee-green:hover .button {
+.card__fee-green:hover, .card__fee-green:hover .button {
   box-shadow: 5px 10px 14px var(--green-color-shadow);
 }
 
@@ -524,64 +574,6 @@
     margin-right: 5%;
   }
 }
-.logo {
-  width: 206px;
-  height: 37px;
-}
-
-.button {
-  color: white;
-  background-color: var(--blue-color);
-  border-radius: 40px;
-  padding: 20px 30px;
-  border: none;
-  font-family: var(--font-family-text);
-  font-size: 1rem;
-  max-width: 440px;
-}
-.button:hover {
-  background-color: var(--blue-color-hover);
-  transition: background-color 0.5s;
-}
-.button:not(:hover) {
-  transition: background-color 0.5s;
-}
-
-.button__container {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-family: var(--font-family-title);
-  font-weight: 400;
-}
-
-.text {
-  font-family: var(--font-family-text);
-  font-weight: 400;
-}
-
-:root {
-  --blue-color: #08A6E4;
-  --blue-color-hover: #078fc5;
-  --blue-color-shadow: #07ace64a;
-  --red-color: #FB3B64;
-  --red-color-hover: #fa1e4e;
-  --red-color-shadow: #eb476e4a;
-  --green-color: #55DFB4;
-  --green-color-hover: #29d69f;
-  --green-color-shadow: #55dfb44a;
-  --white-color: #FFFFFF;
-  --grey-color-text: #A5A5A5;
-  --grey-color-border: #E8E9ED;
-  --grey-color-background: #F7F7F7;
-  --grey-color-input: #95989A;
-  --grey-color-policies: #707070;
-  --font-family-text: "Open Sans";
-  --font-family-title: "Raleway";
-}
-
 * {
   box-sizing: border-box;
   margin: 0;

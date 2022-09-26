@@ -14,6 +14,15 @@
     border: 1px solid;
     border-radius: 18px;
 
+    &:hover {
+        transform: scale(1.10);
+        transition: all 0.5s;
+    }
+
+    &:not(:hover) {
+        transition: all 0.5s;
+    }
+
     .card__price {
         display: inline-block;
         width: 49%;
@@ -75,15 +84,7 @@
             width: 40%;
         }
     }
-}
 
-.card__fee:hover {
-    transform: scale(1.10);
-    transition: all 0.5s;
-}
-
-.card__fee:not(:hover) {
-    transition: all 0.5s;
 }
 
 .card__fee-red {
@@ -95,16 +96,16 @@
 
     .card__button .button {
         background-color: var(--red-color);
+
+        &:hover {
+            background-color: var(--red-color-hover);
+        }
     }
 
-    .card__button .button:hover {
-        background-color: var(--red-color-hover);
+    &:hover,
+    &:hover .button {
+        box-shadow: 5px 10px 14px var(--red-color-shadow)
     }
-}
-
-.card__fee-red:hover,
-.card__fee-red:hover .button {
-    box-shadow: 5px 10px 14px var(--red-color-shadow)
 }
 
 .card__fee-blue {
@@ -116,16 +117,16 @@
 
     .card__button .button {
         background-color: var(--blue-color);
+
+        &:hover {
+            background-color: var(--blue-color-hover);
+        }
     }
 
-    .card__button .button:hover {
-        background-color: var(--blue-color-hover);
+    &:hover,
+    &:hover .button {
+        box-shadow: 5px 10px 14px var(--blue-color-shadow);
     }
-}
-
-.card__fee-blue:hover,
-.card__fee-blue:hover .button {
-    box-shadow: 5px 10px 14px var(--blue-color-shadow);
 }
 
 .card__fee-green {
@@ -137,16 +138,16 @@
 
     .card__button .button {
         background-color: var(--green-color);
+
+        &:hover {
+            background-color: var(--green-color-hover);
+        }
     }
 
-    .card__button .button:hover {
-        background-color: var(--green-color-hover);
+    &:hover,
+    &:hover .button {
+        box-shadow: 5px 10px 14px var(--green-color-shadow);
     }
-}
-
-.card__fee-green:hover,
-.card__fee-green:hover .button {
-    box-shadow: 5px 10px 14px var(--green-color-shadow);
 }
 
 @media only screen and (min-width: 1000px) {
