@@ -2,13 +2,15 @@
   "homepage": "https://JoseFerAlvarez.github.io/oxygen-shop",
   "devDependencies": {
     "gh-pages": "^4.0.0",
+    "parcel": "^2.7.0",
     "sass": "^1.54.9"
   },
   "dependencies": {
     "http-server": "^14.1.1"
   },
   "scripts": {
-    "start": "http-server",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build --public-url https://JoseFerAlvarez.github.io/oxygen-shop",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "compile": "sass --watch src/scss/styles.scss src/css/styles.css"
