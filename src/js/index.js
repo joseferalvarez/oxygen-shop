@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
 const scrollbar = document.querySelector(".scrollbar");
+const returnBtn = document.querySelector(".return-button");
 
 burger.addEventListener("click", () => {
     menu.classList.toggle("nav-visible");
@@ -13,6 +14,14 @@ window.addEventListener("scroll", () => {
     let winHeight = window.innerHeight;
     let scrollPercent = Math.round(((scrollTop) / (docHeight - winHeight)) * 100);
 
-    console.log(scrollPercent);
     scrollbar.style.width = scrollPercent + "%"
+});
+
+returnBtn.addEventListener("click", () => {
+    setTimeout(() => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        })
+    }, 200);
 });
