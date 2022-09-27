@@ -4,6 +4,11 @@ const scrollbar = document.querySelector(".scrollbar");
 const returnBtn = document.querySelector(".return-button");
 const sendBtn = document.querySelector(".send");
 const selectPrices = document.querySelector(".select__pricing");
+const popup = document.querySelector(".popup");
+
+setTimeout(() => {
+    popup.classList.add("popup-visible");
+}, 5000)
 
 burger.addEventListener("click", () => {
     menu.classList.toggle("nav-visible");
@@ -74,7 +79,6 @@ selectPrices.addEventListener("change", () => {
             }
         });
 });
-
 
 function sendForm(email, name, url) {
     fetch(url, {

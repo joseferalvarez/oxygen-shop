@@ -1,0 +1,78 @@
+.popup__container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.popup {
+    display: block;
+    visibility: hidden;
+    border: 1px solid var(--grey-color-border);
+    border-radius: 5px;
+    padding: 5%;
+    margin: 25% auto;
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--white-color);
+    position: relative;
+
+    .popup__close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .popup__title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+
+    .popup__form {
+        .popup__email__text {
+            margin-top: 20px;
+        }
+
+        .popup__input {
+            border: none;
+            width: 100%;
+            border-bottom: 1px solid var(--grey-color-input);
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .popup__policies {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+
+            .popup__checkbox {
+                width: 24px;
+                height: 24px;
+            }
+
+        }
+    }
+
+    .button {
+        margin-top: 20px;
+        padding: 10px 20px;
+    }
+}
+
+.popup-visible {
+    visibility: visible;
+}
+
+@media only screen and (min-width: 1000px) {
+    .popup {
+        padding: 2%;
+        margin: 10% auto;
+    }
+}
