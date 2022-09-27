@@ -3,6 +3,7 @@ const menu = document.querySelector(".nav");
 const scrollbar = document.querySelector(".scrollbar");
 const returnBtn = document.querySelector(".return-button");
 const sendBtn = document.querySelector(".send");
+const selectPrices = document.querySelector(".select__pricing");
 
 burger.addEventListener("click", () => {
     menu.classList.toggle("nav-visible");
@@ -51,6 +52,29 @@ sendBtn.addEventListener("click", () => {
     }
 
 });
+
+selectPrices.addEventListener("change", () => {
+    let currencie = (selectPrices.value).toLowerCase();
+    const URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json"
+    let cardProfessional = document.querySelector(".card__price-professional")
+    let cardPremium = document.querySelector(".card__price-premium");
+
+    const promise = fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+            if (currencie === "eur") {
+                cardProfessional.innerText = "$" + (data.usd.eur * 25).toFixed(2);
+                cardPremium.innerText = "$" + (data.usd.eur * 60).toFixed(2);
+            } else if (currencie === "gbp") {
+                cardProfessional.innerText = "$" + (data.usd.gbp * 25).toFixed(2);
+                cardPremium.innerText = "$" + (data.usd.gbp * 60).toFixed(2);
+            } else {
+                cardProfessional.innerText = "$25";
+                cardPremium.innerText = "$60";
+            }
+        });
+});
+
 
 function sendForm(email, name, url) {
     fetch(url, {
