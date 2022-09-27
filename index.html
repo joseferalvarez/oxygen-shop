@@ -212,14 +212,15 @@
             </div>
         </div>
 
-        <div class="contact__form">
+        <form class="contact__form">
             <p class="contact__input contact__input-text">NAME</p>
-            <input class="contact__input text contact__input-input" type="text">
+            <input class="contact__input text contact__input-input contact__input-name" type="text" minlength="2"
+                maxlength="100" required>
             <p class="contact__input contact__input-text">EMAIL</p>
-            <input class="contact__input text contact__input-input" type="text">
+            <input class="contact__input text contact__input-input contact__input-email" type="email" required>
 
             <div class="contact__policies">
-                <input class="contact__policies-checkbox" type="checkbox">
+                <input class="contact__policies-checkbox .contact__policies-checkbox-bad" type="checkbox" required>
                 <p class="text contact__policies-text">I hereby give consent for my personal data included in my
                     application
                     to
@@ -232,9 +233,9 @@
                     (Data Protection Directive)</p>
             </div>
             <div class="contact__button">
-                <button class="button">Send</button>
+                <button class="button send">Send</button>
             </div>
-        </div>
+        </form>
     </section>
 
     <footer class="footer">

@@ -527,6 +527,9 @@
   border-bottom: 1px solid var(--grey-color-input);
   font-size: 1rem;
 }
+.section__contact .contact__input-bad {
+  border-bottom: 1px solid red;
+}
 .section__contact .contact__policies {
   display: flex;
   margin-top: 30px;
