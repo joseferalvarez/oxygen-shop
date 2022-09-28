@@ -15,6 +15,7 @@
   --grey-color-background: #F7F7F7;
   --grey-color-input: #95989A;
   --grey-color-policies: #707070;
+  --grey-color-slider: #75757577;
   --font-family-text: "Open Sans";
   --font-family-title: "Raleway";
 }
@@ -501,21 +502,25 @@
   margin: 10% 0;
 }
 .slider .slider__img {
-  display: block;
+  display: none;
   margin: auto;
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
+.slider .slider__img-active {
+  display: block;
+}
 .slider .arrow {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.9333333333);
+  background-color: rgba(255, 255, 255, 0.8666666667);
   background-image: url("../assets/icons/arrow-left.svg");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
+  border: 2px solid var(--grey-color-slider);
 }
 .slider .arrow-right {
   position: absolute;
@@ -546,6 +551,10 @@
   height: 15px;
   border-radius: 50%;
   border: none;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+}
+.slider .slider__button__container .slider__button__list .slider__button-active {
+  background-color: #ffffff;
 }
 
 .section__contact .contact__info .contact__questions {

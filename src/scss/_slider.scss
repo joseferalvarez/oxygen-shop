@@ -7,22 +7,27 @@
     margin: 10% 0;
 
     .slider__img {
-        display: block;
+        display: none;
         margin: auto;
         height: 100%;
         width: 100%;
         object-fit: contain;
     }
 
+    .slider__img-active {
+        display: block;
+    }
+
     .arrow {
         display: inline-block;
         width: 40px;
         height: 40px;
-        background-color: #ffffffee;
+        background-color: #ffffffdd;
         background-image: url("../assets/icons/arrow-left.svg");
         background-repeat: no-repeat;
         background-size: contain;
         border-radius: 50%;
+        border: 2px solid var(--grey-color-slider);
     }
 
     .arrow-right {
@@ -56,6 +61,11 @@
                 height: 15px;
                 border-radius: 50%;
                 border: none;
+                background-color: #ffffff77;
+            }
+
+            .slider__button-active {
+                background-color: #ffffff;
             }
         }
     }

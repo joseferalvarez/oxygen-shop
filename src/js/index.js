@@ -1,7 +1,3 @@
-const scrollbar = document.querySelector(".scrollbar");
-const sendBtn = document.querySelector(".send");
-const popup = document.querySelector(".popup");
-const popupContainer = document.querySelector(".popup__container");
 const URL_USER = "https://jsonplaceholder.typicode.com/posts";
 const URL_CURRENCIES = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
 const BASIC_PRICE = 0;
@@ -10,13 +6,24 @@ const PREMIUM_PRICE = 60;
 const REGEXP_NAME = /^.{2,100}$/;
 const REGEXP_EMAIL = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+/*Variables del popup*/
+const scrollbar = document.querySelector(".scrollbar");
+const popup = document.querySelector(".popup");
+const popupContainer = document.querySelector(".popup__container");
+const sendBtn = document.querySelector(".send");
+
+/*Variables del slider*/
+let index = 0;
+let slides = document.getElementsByClassName("slider__img");
+let buttons = document.getElementsByClassName("slider__button");
+
 /*Abre un popup que no ha sido cerrado en 5 segundos*/
 setTimeout(() => {
-    if (localStorage.getItem("popupState") && sessionStorage.getItem("popupState")) {
+    if (!localStorage.getItem("popupState") && !sessionStorage.getItem("popupState")) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
-}, 5000)
+}, 5000);
 
 /*Abre y cierra el menu al pinchar en la hamburguesa*/
 document.querySelector(".burger").addEventListener("click", (e) => {
@@ -134,6 +141,22 @@ document.querySelector(".select__pricing").addEventListener("change", (e) => {
         });
 });
 
+/*Muestra el slider anterior*/
+document.querySelector(".arrow-left").addEventListener("click", () => {
+    nextSlide(-1);
+})
+
+/*Muestra el slider siguiente*/
+document.querySelector(".arrow-right").addEventListener("click", () => {
+    nextSlide(1);
+})
+
+/*Muestra el slider correspondiente al boton*/
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", () => {
+        showSlide(i);
+    });
+}
 
 /*Envia al servidor el email y nombre de contacto*/
 async function sendForm(email, name, url) {
@@ -158,27 +181,27 @@ function setScrollPopup(percent) {
     }
 }
 
-let index = 0;
-
-document.querySelector(".arrow-left").addEventListener("click", () => {
-    showSlide(-1);
-})
-
-document.querySelector(".arrow-right").addEventListener("click", () => {
-    showSlide(1);
-})
-
-function showSlide(n) {
-    let slides = document.getElementsByClassName("slider__img");
-
+/*Aumenta o reduce el indice del slide*/
+function nextSlide(n) {
     index += n;
-
     if (index >= slides.length) {
         index = 0;
     }
     if (index < 0) {
         index = slides.length - 1;
     }
-
-    console.log(index);
+    showSlide(index);
 }
+
+/*Muestra el slider actual y esconde el resto*/
+function showSlide(n) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        buttons[i].classList.remove("slider__button-active");
+    }
+
+    slides[n].style.display = "block";
+    buttons[n].classList.add("slider__button-active");
+}
+
+
