@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     background-color: transparent;
-    z-index: 3;
+    z-index: -1;
 }
 
 .popup {
@@ -20,7 +20,7 @@
     background-color: var(--white-color);
     position: relative;
 
-    .popup__close {
+    .popup__cross {
         display: block;
         position: absolute;
         top: 10px;
@@ -39,10 +39,7 @@
         }
 
         .popup__input {
-            border: none;
             width: 100%;
-            border-bottom: 1px solid var(--grey-color-input);
-            font-size: 1rem;
             margin-top: 10px;
         }
 
@@ -64,6 +61,10 @@
         margin-top: 20px;
         padding: 10px 20px;
     }
+}
+
+.popup__container-front {
+    z-index: 3;
 }
 
 .popup-visible {

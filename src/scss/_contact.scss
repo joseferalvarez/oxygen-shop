@@ -52,17 +52,6 @@
         color: var(--blue-color);
     }
 
-    .contact__input-input {
-        border: none;
-        width: 90%;
-        border-bottom: 1px solid var(--grey-color-input);
-        font-size: 1rem;
-    }
-
-    .contact__input-bad {
-        border-bottom: 1px solid red;
-    }
-
     .contact__policies {
         display: flex;
         margin-top: 30px;

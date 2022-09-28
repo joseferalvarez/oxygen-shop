@@ -100,7 +100,7 @@
             <div class="card__fee card__fee-red">
                 <div class="card__price">
                     <h2 class="card__price-type">Basic</h2>
-                    <p class="card__price-dollar">$0</p>
+                    <p class="card__price-dollar card__price-basic">$0</p>
                     <p class="card__price-offer">&nbsp</p>
                 </div>
                 <div class="card__benefits">
@@ -198,6 +198,26 @@
         </div>
     </section>
 
+    <div id="slider" class="slider">
+        <img class="slider__img" src="./src/assets/images/minimalsetup.jpg">
+        <!--<img class="slider__img" src="./src/assets/images/minimalsetup.jpg">-->
+        <!--<img class="slider__img" src="./src/assets/images/minimalsetup.jpg">-->
+        <!--<img class="slider__img" src="./src/assets/images/minimalsetup.jpg">-->
+        <!--<img class="slider__img" src="./src/assets/images/minimalsetup.jpg">-->
+        <div class="arrow arrow-right"></div>
+        <div class="arrow arrow-left"></div>
+
+        <div class="slider__button__container">
+            <div class="slider__button__list">
+                <button class="slider__button"></button>
+                <button class="slider__button"></button>
+                <button class="slider__button"></button>
+                <button class="slider__button"></button>
+                <button class="slider__button"></button>
+            </div>
+        </div>
+    </div>
+
     <section class="section__contact" id="anchor-contact">
         <div class="contact__info">
             <h2 class="title contact__questions">Any questions?</h2>
@@ -218,10 +238,10 @@
 
         <form class="contact__form">
             <p class="contact__input contact__input-text">NAME</p>
-            <input class="contact__input text contact__input-input contact__input-name" type="text" minlength="2"
-                maxlength="100" required>
+            <input class="contact__input text input contact__input-name" type="text" minlength="2" maxlength="100"
+                required>
             <p class="contact__input contact__input-text">EMAIL</p>
-            <input class="contact__input text contact__input-input contact__input-email" type="email" required>
+            <input class="contact__input text input contact__input-email" type="email" required>
 
             <div class="contact__policies">
                 <input class="contact__policies-checkbox" type="checkbox" required>
@@ -257,12 +277,12 @@
 
     <div class="popup__container">
         <div class="popup">
-            <div class="text popup__close">X</div>
+            <div class="text popup__cross">X</div>
             <p class="title popup__title">Subscribe to our newsletter!</p>
 
             <form class="popup__form">
                 <p class="text popup__email__text">Email:</p>
-                <input class="text popup__input" type="email" required>
+                <input class="text popup__input input" type="email" required>
                 <div class="popup__policies">
                     <input class="popup__checkbox" type="checkbox" required>
                     <p class="text popup__text">I hereby give consent for my personal data included in my
@@ -280,7 +300,7 @@
                 </div>
             </form>
             <div class="button__container">
-                <button class="button">Send</button>
+                <button class="button popup__button">Send</button>
             </div>
         </div>
     </div>

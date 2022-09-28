@@ -57,6 +57,17 @@
   font-weight: 400;
 }
 
+.input {
+  border: none;
+  width: 90%;
+  border-bottom: 1px solid var(--grey-color-input);
+  font-size: 1rem;
+}
+
+.input-error {
+  border-bottom: 1px solid red;
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -481,6 +492,62 @@
     top: 60px;
   }
 }
+.slider {
+  position: relative;
+  display: block;
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  margin: 10% 0;
+}
+.slider .slider__img {
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.slider .arrow {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9333333333);
+  background-image: url("../assets/icons/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+.slider .arrow-right {
+  position: absolute;
+  top: 45%;
+  right: 2%;
+  transform: scaleX(-1);
+}
+.slider .arrow-left {
+  position: absolute;
+  top: 45%;
+  left: 2%;
+}
+.slider .slider__button__container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  gap: 5%;
+}
+.slider .slider__button__container .slider__button__list {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  padding-bottom: 2%;
+}
+.slider .slider__button__container .slider__button__list .slider__button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+}
+
 .section__contact .contact__info .contact__questions {
   margin-left: 30px;
   font-size: 2.5rem;
@@ -520,15 +587,6 @@
   font-family: var(--font-family-text);
   font-weight: 600;
   color: var(--blue-color);
-}
-.section__contact .contact__input-input {
-  border: none;
-  width: 90%;
-  border-bottom: 1px solid var(--grey-color-input);
-  font-size: 1rem;
-}
-.section__contact .contact__input-bad {
-  border-bottom: 1px solid red;
 }
 .section__contact .contact__policies {
   display: flex;
@@ -616,7 +674,7 @@
   left: 0;
   width: 100%;
   background-color: transparent;
-  z-index: 3;
+  z-index: -1;
 }
 
 .popup {
@@ -631,7 +689,7 @@
   background-color: var(--white-color);
   position: relative;
 }
-.popup .popup__close {
+.popup .popup__cross {
   display: block;
   position: absolute;
   top: 10px;
@@ -646,10 +704,7 @@
   margin-top: 20px;
 }
 .popup .popup__form .popup__input {
-  border: none;
   width: 100%;
-  border-bottom: 1px solid var(--grey-color-input);
-  font-size: 1rem;
   margin-top: 10px;
 }
 .popup .popup__form .popup__policies {
@@ -665,6 +720,10 @@
 .popup .button {
   margin-top: 20px;
   padding: 10px 20px;
+}
+
+.popup__container-front {
+  z-index: 3;
 }
 
 .popup-visible {
