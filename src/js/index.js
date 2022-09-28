@@ -12,7 +12,7 @@ const REGEXP_EMAIL = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+
 
 /*Abre un popup que no ha sido cerrado en 5 segundos*/
 setTimeout(() => {
-    if (!localStorage.getItem("popupState") && !sessionStorage.getItem("popupState")) {
+    if (localStorage.getItem("popupState") && sessionStorage.getItem("popupState")) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
@@ -156,4 +156,29 @@ function setScrollPopup(percent) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
+}
+
+let index = 0;
+
+document.querySelector(".arrow-left").addEventListener("click", () => {
+    showSlide(-1);
+})
+
+document.querySelector(".arrow-right").addEventListener("click", () => {
+    showSlide(1);
+})
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slider__img");
+
+    index += n;
+
+    if (index >= slides.length) {
+        index = 0;
+    }
+    if (index < 0) {
+        index = slides.length - 1;
+    }
+
+    console.log(index);
 }
