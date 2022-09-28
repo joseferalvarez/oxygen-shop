@@ -19,7 +19,7 @@ let buttons = document.getElementsByClassName("slider__button");
 
 /*Abre un popup que no ha sido cerrado en 5 segundos*/
 setTimeout(() => {
-    if (localStorage.getItem("popupState") && sessionStorage.getItem("popupState")) {
+    if (!localStorage.getItem("popupState") && !sessionStorage.getItem("popupState")) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
