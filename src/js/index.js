@@ -19,7 +19,7 @@ let buttons = document.getElementsByClassName("slider__button");
 
 /*Abre un popup que no ha sido cerrado en 5 segundos*/
 setTimeout(() => {
-    if (!localStorage.getItem("popupState") && !sessionStorage.getItem("popupState")) {
+    if (localStorage.getItem("popupState") && sessionStorage.getItem("popupState")) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
@@ -78,7 +78,7 @@ document.querySelector(".popup__button").addEventListener("click", () => {
         localStorage.setItem("popupState", "1");
         sessionStorage.setItem("popupState", "1");
     } else {
-        email.classList.add("popup-error");
+        email.classList.add("input-error");
     }
 });
 
@@ -92,7 +92,6 @@ const returnBtn = document.querySelector(".return-button").addEventListener("cli
     }, 200);
 });
 
-/* TODO: optimizar esto*/
 /*Envia los datos del formulario a un servidor*/
 sendBtn.addEventListener("click", () => {
     let name = document.querySelector(".contact__input-name");

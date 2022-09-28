@@ -61,12 +61,17 @@
 .input {
   border: none;
   width: 90%;
-  border-bottom: 1px solid var(--grey-color-input);
+  border-bottom: 2px solid var(--grey-color-input);
   font-size: 1rem;
 }
 
+.input:focus {
+  outline: none;
+  border-color: #08A6E4;
+}
+
 .input-error {
-  border-bottom: 1px solid red;
+  border-color: #fa1e4e;
 }
 
 .topbar {
@@ -163,7 +168,7 @@
   bottom: 2%;
   right: 3%;
   width: 50px;
-  background-color: white;
+  background-color: transparent;
   border: 0;
   border-radius: 50%;
 }
@@ -348,6 +353,10 @@
   font-size: 2.25rem;
   text-align: center;
   margin-top: 50px;
+}
+.section__pricing .select__pricing {
+  margin: 2% 5%;
+  font-size: 1rem;
 }
 
 .card__fee {
@@ -703,6 +712,7 @@
   position: absolute;
   top: 10px;
   right: 20px;
+  cursor: default;
 }
 .popup .popup__title {
   text-align: center;
