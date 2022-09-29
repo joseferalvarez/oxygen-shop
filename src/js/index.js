@@ -19,7 +19,7 @@ let buttons = document.getElementsByClassName("slider__button");
 
 /*Abre un popup que no ha sido cerrado en 5 segundos*/
 setTimeout(() => {
-    if (!localStorage.getItem("popupState") && !sessionStorage.getItem("popupState")) {
+    if (!localStorage.getItem("popupState")) {
         popup.classList.add("popup-visible");
         popupContainer.classList.add("popup__container-front");
     }
@@ -39,32 +39,29 @@ window.addEventListener("scroll", () => {
     scrollbar.style.width = scrollPercent + "%"
 });
 
-/*Cierra el popup en la X y actualiza el local y session storage*/
+/*Cierra el popup en la X y actualiza el local storage*/
 document.querySelector(".popup__cross").addEventListener("click", () => {
     popup.classList.remove("popup-visible");
     popupContainer.classList.remove("popup__container-front");
 
     localStorage.setItem("popupState", "1");
-    sessionStorage.setItem("popupState", "1");
 });
 
-/*Cierra el popup con ESC y actualiza el local y session storage*/
+/*Cierra el popup con ESC y actualiza el local storage*/
 window.addEventListener("keyup", (e) => {
     if (e.key === "Escape") {
         popup.classList.remove("popup-visible");
         popupContainer.classList.remove("popup__container-front");
     }
     localStorage.setItem("popupState", "1");
-    sessionStorage.setItem("popupState", "1");
 });
 
-/*Cierra el popup clicando fuera y actualiza el local y session storage*/
+/*Cierra el popup clicando fuera y actualiza el local storage*/
 window.addEventListener("click", (e) => {
     if (!popup.contains(e.target)) {
         popup.classList.remove("popup-visible");
         popupContainer.classList.remove("popup__container-front");
         localStorage.setItem("popupState", "1");
-        sessionStorage.setItem("popupState", "1");
     }
 });
 
@@ -76,7 +73,6 @@ document.querySelector(".popup__button").addEventListener("click", () => {
         sendForm(email, "", URL_USER)
         popup.classList.remove("popup-visible");
         localStorage.setItem("popupState", "1");
-        sessionStorage.setItem("popupState", "1");
     } else {
         email.classList.add("input-error");
     }
@@ -120,18 +116,17 @@ document.querySelector(".select__pricing").addEventListener("change", (e) => {
     let cardBasic = (document.querySelector(".card__price-basic"));
     let cardProfessional = document.querySelector(".card__price-professional");
     let cardPremium = document.querySelector(".card__price-premium");
-
     const promise = fetch(URL_CURRENCIES)
         .then(response => response.json())
         .then(data => {
             if (currencie === "eur") {
-                cardBasic.innerText = "€" + ((data.usd.eur * BASIC_PRICE).toFixed(2));
-                cardProfessional.innerText = "€" + (data.usd.eur * PROFESSIONAL_PRICE).toFixed(2);
-                cardPremium.innerText = "€" + (data.usd.eur * PREMIUM_PRICE).toFixed(2);
+                cardBasic.innerText = "€" + testNumbersDecimals((data.usd.eur * BASIC_PRICE).toFixed(2));
+                cardProfessional.innerText = "€" + testNumbersDecimals((data.usd.eur * PROFESSIONAL_PRICE).toFixed(2));
+                cardPremium.innerText = "€" + testNumbersDecimals((data.usd.eur * PREMIUM_PRICE).toFixed(2));
             } else if (currencie === "gbp") {
-                cardBasic.innerText = "£" + ((data.usd.eur * BASIC_PRICE).toFixed(2));
-                cardProfessional.innerText = "£" + (data.usd.gbp * PROFESSIONAL_PRICE).toFixed(2);
-                cardPremium.innerText = "£" + (data.usd.gbp * PREMIUM_PRICE).toFixed(2);
+                cardBasic.innerText = "£" + testNumbersDecimals((data.usd.gbp * BASIC_PRICE).toFixed(2));
+                cardProfessional.innerText = "£" + testNumbersDecimals((data.usd.gbp * PROFESSIONAL_PRICE).toFixed(2));
+                cardPremium.innerText = "£" + testNumbersDecimals((data.usd.gbp * PREMIUM_PRICE).toFixed(2));
             } else {
                 cardBasic.innerText = "$" + BASIC_PRICE;
                 cardProfessional.innerText = "$" + PROFESSIONAL_PRICE;
@@ -201,6 +196,19 @@ function showSlide(n) {
 
     slides[n].style.display = "block";
     buttons[n].classList.add("slider__button-active");
+}
+
+/*Comprueba que el numero tenga dos decimales 0*/
+function testNumbersDecimals(n) {
+    const REGEXP_DECIMALS = /.\.00/;
+    let numberString = n.toString();
+    let index = numberString.indexOf(".");
+
+    if (REGEXP_DECIMALS.test(numberString)) {
+        n = (numberString.substring(0, index));
+    }
+
+    return n;
 }
 
 
